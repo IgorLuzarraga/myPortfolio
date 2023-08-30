@@ -18,7 +18,7 @@ const LandingText = ({ btnsInitPos }: Props) => {
         >
             <div className="flex justify-center md:justify-normal gap-[15px] text-6xl font-playfair z-10">
                 <p className="text-center md:text-start">
-                    Jane
+                    Igor
                 </p>
 
                 <p
@@ -26,7 +26,7 @@ const LandingText = ({ btnsInitPos }: Props) => {
             xs:before:content-brush before:absolute before:-left-[25px] 
             before:-top-[80px] before:z-[-1]"
                 >
-                    Esper
+                    Luzarraga
                 </p>
 
             </div>

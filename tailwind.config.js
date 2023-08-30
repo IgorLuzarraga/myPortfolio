@@ -4,11 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "deep-blue": "#010026",
+        // "deep-blue": "#010026",
+        "deep-blue": "rgb(5, 8, 22)",
         blue: "#2CBCE9",
         red: "#DC4492",
         yellow: "#FDCC49",
-        purple: "rgb(147, 51, 234)",
+        myPurple: "rgb(147, 51, 234)",
+        "card-color": "rgb(21,16,48)",
         grey: "#ededed",
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",

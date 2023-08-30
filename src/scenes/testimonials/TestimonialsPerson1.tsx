@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const TestimonialsPerson1 = () => {
     return (
         <motion.div
-            className="mx-auto relative bg-blue max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
+            className="mx-auto relative bg-card-color max-w-[400px] h-[350px] flex flex-col justify-end p-16 mt-48
       before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:content-person1"
             initial="hidden"
             whileInView="visible"
@@ -16,7 +16,7 @@ const TestimonialsPerson1 = () => {
         >
             <p className="font-playfair text-6xl">“</p>
             <p className="text-center text-xl">
-                A auctor pharetra hendrerit mattis amet etiam interdum platea.
+                Igor's work proved me wrong; our website now rivals the beauty of our product.
             </p>
         </motion.div>
     )
