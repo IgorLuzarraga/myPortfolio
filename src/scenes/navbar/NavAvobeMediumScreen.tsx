@@ -7,7 +7,7 @@ type Props = {
 }
 
 const NavAvobeMediumScreen = ({ selectedPage, setSelectedPage }: Props) =>
-    <div className="flex gap-16 font-opensans text-sm font-semibold">
+    <div className="flex gap-16 font-opensans text-lg text-purple-300 font-semibold">
         <Link
             //page="Home"
             page={SelectedPage.Home}

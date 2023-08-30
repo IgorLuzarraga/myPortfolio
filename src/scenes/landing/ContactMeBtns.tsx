@@ -35,7 +35,7 @@ const ContactMeBtns = ({ btnsInitPos, setSelectedPage }: Props) => {
                 onClick={() => setSelectedPage(SelectedPage.Contact)}
                 href={fromSelectedPageToPageHref(SelectedPage.Contact)}
             >
-                <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
+                <div className="bg-deep-blue hover:text-myRed transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
                     Let's talk
                 </div>
             </AnchorLink>

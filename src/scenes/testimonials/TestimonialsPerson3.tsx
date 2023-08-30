@@ -16,7 +16,7 @@ before:absolute before:top-[-120px] before:-ml-[110px] before:left-1/2 before:co
         >
             <p className="font-playfair text-6xl">“</p>
             <p className="text-center text-xl">
-                Rick's care for his clients' success sets him apart. He goes the extra mile to ensure our goals are met.
+                Igor's care for his clients' success sets him apart. He goes the extra mile to ensure our goals are met.
             </p>
         </motion.div>
     )

@@ -14,8 +14,8 @@ const Link = ({
     setSelectedPage
 }: Props) =>
     <AnchorLink
-        className={`${selectedPage === page ? "text-purple-300" : ""}
-        transition duration-500 hover:text-purple-300
+        className={`${selectedPage === page ? "text-white" : ""}
+        transition duration-500 hover:text-white
         `}
         href={`#${page}`}
         onClick={() => setSelectedPage(page)}

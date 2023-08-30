@@ -12,8 +12,6 @@ type Props = {
     setIsAppFlipped: (value: boolean) => void,
 }
 
-
-
 const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, isAppFlipped, setIsAppFlipped }: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px")
     const navbarBackground = isTopOfPage ? "" : "bg-deep-blue  shadow-2xl"

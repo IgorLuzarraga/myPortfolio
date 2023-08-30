@@ -10,7 +10,7 @@ const BtnFlipApp = ({ isAppFlipped, setIsAppFlipped }: Props) =>
         className='rounded-full p-'
         onClick={() => setIsAppFlipped(!isAppFlipped)}
     >
-        <FaFlipboard className='w-6 h-6 text-white  hover:text-purple-300 transition duration-500' />
+        <FaFlipboard className='w-7 h-7 text-purple-300 hover:text-white transition duration-500' />
     </button>
 
 export default BtnFlipApp

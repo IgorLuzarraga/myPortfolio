@@ -20,8 +20,8 @@ const MySkillsInnovative = () => {
                         Innovative
                     </p>
                 </div>
-                {/* <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" /> */}
-                <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-20 md:bg-opacity-70"></div>
+                {/* <div className="w-1/2 md:w-3/4 h-32 bg-myRed absolute right-0 top-0 z-[-1]" /> */}
+                <div className="w-1/2 md:w-3/4 h-32 bg-myRed absolute right-0 top-0 z-20 md:bg-opacity-70"></div>
             </div>
             <p className="mt-5">
                 Urna, eget pulvinar dolor cursus volutpat dictum odio. Nec ultricies
