@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
-    const inputStyles = `mb-5 w-full bg-blue font-semibold placeholder-opaque-black p-3`
+    const inputStyles = `mb-5 w-full bg-form-color font-semibold placeholder-white p-3`
 
     const {
         register,
@@ -88,11 +88,11 @@ const ContactForm = () => {
                 )}
 
                 <button
-                    className="p-5 bg-yellow text-deep-blue font-semibold hover:bg-red 
+                    className="p-5 bg-purple-500 text-deep-blue font-semibold hover:bg-red 
                     hover:text-white transition duration-500"
                     type="submit"
                 >
-                    SEND ME A MESSAGE
+                    SEND MESSAGE
                 </button>
             </form>
         </motion.div>

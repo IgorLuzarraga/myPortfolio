@@ -6,11 +6,14 @@ module.exports = {
       colors: {
         // "deep-blue": "#010026",
         "deep-blue": "rgb(5, 8, 22)",
-        blue: "#2CBCE9",
+        myBlue: "#2CBCE9",
         myRed: "#DC4492",
         yellow: "#FDCC49",
         myPurple: "rgb(147, 51, 234)",
         "card-color": "rgb(21,16,48)",
+        "form-color": "rgb(21,16,48)",
+        "nav-color": "rgb(21,16,48)",
+        "footer-color": "rgb(21,16,48)",
         grey: "#ededed",
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
@@ -21,6 +24,9 @@ module.exports = {
 
         "gradient-rainblue":
           "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
+
+        "gradient-green-pink":
+          "linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%)"
       }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],

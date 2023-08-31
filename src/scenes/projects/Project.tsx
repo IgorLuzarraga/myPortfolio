@@ -28,7 +28,8 @@ const Project = ({ title }: Props) => {
                     porttitor accumsan tincidunt.
                 </p>
             </div>
-            <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
+            <img src={`../assets/${projectTitle}.jpg`} alt={projectTitle}
+                className="w-[400px] h-[400px] object-contain" />
         </motion.div>
     );
 };

@@ -51,7 +51,7 @@ const Btn3Bars = ({ isMenuToggled, setIsMenuToggled }: Btn3BarsProps) =>
     </button>
 
 const ModalMenu = ({ selectedPage, setSelectedPage, isMenuToggled, setIsMenuToggled }: ModalMenuProps) =>
-    <div className='fixed right-0 bottom-0 z-40 h-full w-[300px] bg-blue drop-shadow-xl'>
+    <div className='fixed right-0 bottom-0 z-40 h-full w-[300px] bg-myBlue drop-shadow-xl'>
         {/* CLOSE ICON */}
         <div className='flex justify-end p-12'>
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>

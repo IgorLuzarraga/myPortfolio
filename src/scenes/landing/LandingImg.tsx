@@ -10,7 +10,7 @@ const LandingImg = ({ isAboveLarge }: Props) => {
                     className="relative z-0 ml-20 before:absolute before:-top-10 
                 before:-left-10 before:rounded-t-[400px] before:w-full 
                 before:max-w-[400px] md:before:max-w-[600px] before:h-full 
-                before:border-2 before:border-blue before:z-[-1]"
+                before:border-2 before:border-myBlue before:z-[-1]"
                 >
 
                     <img

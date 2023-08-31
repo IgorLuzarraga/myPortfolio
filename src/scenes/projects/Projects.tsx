@@ -17,7 +17,8 @@ const container = {
 
 const Projects = () => {
     return (
-        <section id={fromSelectedPageToPageId(SelectedPage.Projects)} className="pt-48 pb-48">
+        <section id={fromSelectedPageToPageId(SelectedPage.Projects)}
+            className="mx-auto w-5/6 py-32">
 
             {/* HEADINGS */}
             <ProjectsHeadings />

@@ -31,7 +31,7 @@ const ContactMeBtns = ({ btnsInitPos, setSelectedPage }: Props) => {
             </AnchorLink>
 
             <AnchorLink
-                className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
+                className="rounded-r-sm bg-gradient-green-pink py-0.5 pr-0.5"
                 onClick={() => setSelectedPage(SelectedPage.Contact)}
                 href={fromSelectedPageToPageHref(SelectedPage.Contact)}
             >

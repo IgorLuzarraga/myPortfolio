@@ -21,7 +21,7 @@ const MySkillsExperience = () => {
                     </p>
                 </div>
 
-                {/* <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-20 md:bg-opacity-70"></div> */}
+                {/* <div className="w-1/2 md:w-3/4 h-32 bg-myBlue absolute right-0 top-0 z-20 md:bg-opacity-70"></div> */}
             </div>
 
             <p className="mt-0">

@@ -17,7 +17,8 @@ const container = {
 
 const ProjectsFlipped = () => {
     return (
-        <section id={fromSelectedPageToPageId(SelectedPage.Projects)} className="pt-48 pb-48">
+        <section id={fromSelectedPageToPageId(SelectedPage.Projects)}
+            className="pt-32 pb-32">
 
             {/* HEADINGS */}
             <ProjectsHeadings />

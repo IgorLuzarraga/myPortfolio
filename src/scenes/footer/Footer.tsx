@@ -4,7 +4,7 @@ import FooterCopyRight from "./FooterCopyRight"
 
 const Footer = () => {
     return (
-        <footer className="h-64 bg-myRed pt-10">
+        <footer className="h-64 bg-footer-color pt-10">
             <div className="mx-auto w-5/6">
 
                 <SocialMediaIcons />

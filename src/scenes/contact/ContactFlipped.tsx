@@ -7,7 +7,8 @@ import ContactImgFlipped from "./ContactImgFlipped";
 const ContactFlipped = () => {
 
     return (
-        <section id={fromSelectedPageToPageId(SelectedPage.Contact)} className="contact py-48">
+        <section id={fromSelectedPageToPageId(SelectedPage.Contact)}
+            className="mx-auto w-5/6 py-32">
 
             {/* HEADINGS */}
             <ContactHeading headingInitPos={-500} />
