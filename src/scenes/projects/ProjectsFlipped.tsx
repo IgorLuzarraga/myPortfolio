@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { SelectedPage } from "../../share/types";
 import { fromSelectedPageToPageId } from "../../utilities/utils";
 import ProjectsHeadings from "./ProjectsHeadings";
-import ProjectAdvertisement1 from "./ProjectAdvertisement1";
-import ProjectAdvertisement2 from "./ProjectAdvertisement2";
+import ProjectAdvertisement1 from "./ProjectAdvertisement_1";
+import ProjectAdvertisement2 from "./ProjectAdvertisement_2";
 import ProjectFlipped from "./ProjectFlipped";
 
 const container = {

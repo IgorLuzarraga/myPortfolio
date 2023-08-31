@@ -1,4 +1,4 @@
-const ProjectAdvertisement1 = () => {
+const ProjectAdvertisement_1 = () => {
     return (
         <div
             className="flex justify-center text-center items-center p-10 bg-myRed
@@ -9,4 +9,4 @@ const ProjectAdvertisement1 = () => {
     )
 }
 
-export default ProjectAdvertisement1
+export default ProjectAdvertisement_1
