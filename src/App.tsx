@@ -3,7 +3,7 @@ import NavBar from './scenes/navbar';
 import { SelectedPage } from "./share/types";
 import useMediaQuery from "./hooks/useMediaQuery";
 import DotGroup from "./components/DotGroup";
-import LineGradient from "./components/LineGradient";
+// import LineGradient from "./components/LineGradient";
 import { motion } from "framer-motion"
 import Landing from "./scenes/landing/Landing";
 import LandingFlipped from "./scenes/landing/LandingFlipped";
