@@ -5,7 +5,7 @@ const FooterCopyRight = () => {
                 Igor Luzarraga
             </p>
             <p className="font-playfair text-xl text-white">
-                ©2023 Luzarraga. All Rights Reserved.
+                Copyright © 2023 Luzarraga.
             </p>
         </div>
     )

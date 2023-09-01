@@ -11,8 +11,9 @@ import MySkills from "./scenes/mySkills/MySkills";
 import MySkillsFlipped from "./scenes/mySkills/MySkillsFlipped";
 import Projects from "./scenes/projects/Projects";
 import ProjectsFlipped from "./scenes/projects/ProjectsFlipped";
-import Testimonials from "./scenes/testimonials/Testimonials";
+// import Testimonials from "./scenes/testimonials/Testimonials";
 import TestimonialsFlipped from "./scenes/testimonials/TestimonialFlipped";
+import Testimonials2 from "./scenes/testimonials/Testimonials2";
 import Contact from "./scenes/contact/Contact";
 import ContactFlipped from "./scenes/contact/ContactFlipped";
 import Footer from "./scenes/footer/Footer";
@@ -92,7 +93,9 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Testimonials)}
         >
-          {!isAppFlipped ? <Testimonials /> : <TestimonialsFlipped />}
+          {/* {!isAppFlipped ? <Testimonials /> : <TestimonialsFlipped />} */}
+
+          {!isAppFlipped ? <Testimonials2 /> : <TestimonialsFlipped />}
 
         </motion.div>
       </div>

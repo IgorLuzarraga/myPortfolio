@@ -39,13 +39,13 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, isAppFlipped, setI
                                     setSelectedPage={setSelectedPage}
                                 />
                                 <BtnFlipApp isAppFlipped={isAppFlipped} setIsAppFlipped={setIsAppFlipped} />
-                                <h4 className="font-playfair text-3xl font-bold">JE</h4>
+                                <h4 className="font-playfair text-3xl font-bold">IL</h4>
                             </>
                         }
                     </>
                     :
                     <>
-                        <h4 className="font-playfair text-3xl font-bold">JE</h4>
+                        <h4 className="font-playfair text-3xl font-bold">IL</h4>
                         <NavSmallScreen
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
