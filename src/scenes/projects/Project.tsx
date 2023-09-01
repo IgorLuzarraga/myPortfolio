@@ -12,8 +12,6 @@ const Project = ({ title, desc, github, vercel, image }: ProjectType) => {
     const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-card-color z-30 flex flex-col justify-center items-center gap-3 text-center p-16 text-white`;
 
-    // const projectTitle = title.split(" ").join("-").toLowerCase();
-
     return (
         <motion.div
             className="relative hover:ring-4 ring-purple-400"

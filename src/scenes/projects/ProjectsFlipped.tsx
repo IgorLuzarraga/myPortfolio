@@ -2,9 +2,11 @@ import { motion } from "framer-motion";
 import { SelectedPage } from "../../share/types";
 import { fromSelectedPageToPageId } from "../../utilities/utils";
 import ProjectsHeadings from "./ProjectsHeadings";
-import ProjectAdvertisement1 from "./ProjectAdvertisement_1";
-import ProjectAdvertisement2 from "./ProjectAdvertisement_2";
+// import ProjectAdvertisement1 from "./ProjectAdvertisement_1";
+// import ProjectAdvertisement2 from "./ProjectAdvertisement_2";
 import ProjectFlipped from "./ProjectFlipped";
+import { projectsDataFlipped } from "../../data/projectsData";
+import { ProjectsType } from "../../types/projectsTypes";
 
 const container = {
     hidden: {},
@@ -18,7 +20,7 @@ const container = {
 const ProjectsFlipped = () => {
     return (
         <section id={fromSelectedPageToPageId(SelectedPage.Projects)}
-            className="pt-32 pb-32">
+            className="mx-auto w-5/6 py-32">
 
             {/* HEADINGS */}
             <ProjectsHeadings />
@@ -26,33 +28,37 @@ const ProjectsFlipped = () => {
             {/* PROJECTS */}
             <div className="flex justify-center">
                 <motion.div
-                    className="sm:grid sm:grid-cols-3"
+                    className="sm:grid sm:grid-cols-3 gap-5"
                     variants={container}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
                 >
-                    {/* ROW 1 */}
-                    <ProjectFlipped title="Project 2" />
-                    <ProjectFlipped title="Project 1" />
-                    <ProjectAdvertisement1 />
+
+                    {/* <ProjectAdvertisement1 /> */}
 
 
-                    {/* ROW 2 */}
-                    <ProjectFlipped title="Project 5" />
-                    <ProjectFlipped title="Project 4" />
-                    <ProjectFlipped title="Project 3" />
+                    {showProjects(projectsDataFlipped)}
 
+                    {/* <ProjectAdvertisement2 /> */}
 
-                    {/* ROW 3 */}
-                    <ProjectAdvertisement2 />
-                    <ProjectFlipped title="Project 7" />
-                    <ProjectFlipped title="Project 6" />
 
                 </motion.div>
             </div>
         </section>
     );
 };
+
+const showProjects = (projectsData: ProjectsType) =>
+    projectsData.map((project, index) =>
+        <ProjectFlipped
+            key={`${project.title}-${index}`}
+            title={project.title}
+            desc={project.desc}
+            github={project.github}
+            vercel={project.vercel}
+            image={project.image}
+        />
+    )
 
 export default ProjectsFlipped
