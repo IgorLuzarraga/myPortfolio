@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { AiFillGithub } from 'react-icons/ai';
+import { BsLinkedin } from 'react-icons/bs';
 import { TestimonialType2 } from "../../types/testimonialsTypes";
 
 const Testimonial = ({
@@ -8,6 +10,8 @@ const Testimonial = ({
     designation,
     company,
     image,
+    github,
+    linkedin,
 }: TestimonialType2) => {
     return <motion.div
         className='bg-card-color p-10 rounded-3xl xs:w-[320px] w-full'
@@ -40,6 +44,24 @@ const Testimonial = ({
                     alt={`feedback_by-${name}`}
                     className='w-20 h-20 rounded-full object-cover'
                 />
+            </div>
+            <div className="mt-7 flex justify-center items-center gap-5">
+                <a
+                    className="hover:opacity-50 transition duration-500 bg-card-color"
+                    href={github}
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <AiFillGithub size={38} />
+                </a>
+                <a
+                    className="hover:opacity-50 transition duration-500 bg-card-color"
+                    href={linkedin}
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <BsLinkedin size={38} />
+                </a>
             </div>
         </div>
     </motion.div>

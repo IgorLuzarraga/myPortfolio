@@ -4,6 +4,8 @@ export type TestimonialType = {
     designation: string;
     company: string;
     image: string;
+    github: string;
+    linkedin: string;
 }
 
 export type TestimonialsType = TestimonialType[]
@@ -15,4 +17,6 @@ export type TestimonialType2 = {
     designation: string;
     company: string;
     image: string;
+    github: string;
+    linkedin: string;
 }

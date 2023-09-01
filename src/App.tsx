@@ -12,8 +12,8 @@ import MySkillsFlipped from "./scenes/mySkills/MySkillsFlipped";
 import Projects from "./scenes/projects/Projects";
 import ProjectsFlipped from "./scenes/projects/ProjectsFlipped";
 // import Testimonials from "./scenes/testimonials/Testimonials";
-import TestimonialsFlipped from "./scenes/testimonials/TestimonialFlipped";
 import Testimonials2 from "./scenes/testimonials/Testimonials2";
+import Testimonials2Flipped from "./scenes/testimonials/Testimonials2Flipped";
 import Contact from "./scenes/contact/Contact";
 import ContactFlipped from "./scenes/contact/ContactFlipped";
 import Footer from "./scenes/footer/Footer";
@@ -95,7 +95,7 @@ function App() {
         >
           {/* {!isAppFlipped ? <Testimonials /> : <TestimonialsFlipped />} */}
 
-          {!isAppFlipped ? <Testimonials2 /> : <TestimonialsFlipped />}
+          {!isAppFlipped ? <Testimonials2 /> : <Testimonials2Flipped />}
 
         </motion.div>
       </div>
