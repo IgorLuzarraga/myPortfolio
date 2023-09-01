@@ -27,12 +27,14 @@ const LandingFlipped = ({ setSelectedPage }: Props) => {
 
                 {/* CONTACT ME*/}
                 <ContactMeBtns setSelectedPage={setSelectedPage} btnsInitPos={50} />
-                <SocialMediaBtns btnsInitPos={50} />
 
             </div>
 
-            {/* IMAGE */}
-            <LandingImgFlipped isAboveLarge={isAboveLarge} />
+            {/* IMAGE AND SOCIAL BTNS*/}
+            <div className="flex flex-col justify-center items-center gap-2">
+                <LandingImgFlipped isAboveLarge={isAboveLarge} />
+                <SocialMediaBtns btnsInitPos={50} />
+            </div>
 
         </section>
     );

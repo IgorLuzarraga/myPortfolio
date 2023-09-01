@@ -7,7 +7,7 @@ const LandingImgFlipped = ({ isAboveLarge }: Props) => {
         <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center">
             {isAboveLarge ? (
                 <div
-                    className="relative ml-20 before:absolute before:-top-5 
+                    className="relative before:absolute before:-top-5 
                 before:-left-5 before:rounded-full before:w-full before:h-full 
                 before:border-2 before:border-purple-500 before:z-[-1]"
                 >

@@ -19,8 +19,11 @@ const Landing = ({ setSelectedPage }: Props) => {
             className="md:flex mx-auto w-5/6 justify-between items-center gap-16 md:h-full 
             py-32"
         >
-            {/* IMAGE */}
-            <LandingImg isAboveLarge={isAboveLarge} />
+            {/* IMAGE AND SOCIAL BTNS*/}
+            <div className="flex flex-col justify-center items-center gap-2">
+                <LandingImg isAboveLarge={isAboveLarge} />
+                <SocialMediaBtns btnsInitPos={-50} />
+            </div>
 
             {/* TEXT AND CONTACT */}
             <div className="z-30 basis-2/5 mt-12 md:mt-32">
@@ -30,7 +33,6 @@ const Landing = ({ setSelectedPage }: Props) => {
 
                 {/* CONTACT ME*/}
                 <ContactMeBtns setSelectedPage={setSelectedPage} btnsInitPos={-50} />
-                <SocialMediaBtns btnsInitPos={-50} />
 
             </div>
 
