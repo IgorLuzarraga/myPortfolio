@@ -1,3 +1,7 @@
+import { AiFillGithub } from 'react-icons/ai';
+import { BsLinkedin } from 'react-icons/bs';
+import { RiCellphoneFill } from 'react-icons/ri';
+
 const SocialMediaIcons = () => {
   return (
     <div className="flex justify-center md:justify-start my-10 gap-7">
@@ -7,7 +11,7 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="linkedin-link" src="../assets/linkedin.png" />
+        <BsLinkedin size={38} />
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
@@ -15,16 +19,16 @@ const SocialMediaIcons = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="twitter-link" src="../assets/twitter.png" />
+        <AiFillGithub size={38} />
       </a>
-      <a
-        className="hover:opacity-50 transition duration-500"
-        href="https://www.facebook.com"
-        target="_blank"
-        rel="noreferrer"
+      <div
+        className="flex justify-center items-center gap-1 hover:opacity-50 transition duration-500"
       >
-        <img alt="facebook-link" src="../assets/facebook.png" />
-      </a>
+        <RiCellphoneFill size={38} />
+        <span>+34 717714423</span>
+      </div>
+
+      {/*
       <a
         className="hover:opacity-50 transition duration-500"
         href="https://www.instagram.com"
@@ -32,7 +36,7 @@ const SocialMediaIcons = () => {
         rel="noreferrer"
       >
         <img alt="instagram-link" src="../assets/instagram.png" />
-      </a>
+      </a> */}
     </div>
   );
 };

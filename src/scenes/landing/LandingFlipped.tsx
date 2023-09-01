@@ -19,9 +19,6 @@ const LandingFlipped = ({ setSelectedPage }: Props) => {
             className="md:flex mx-auto w-5/6 justify-between items-center gap-16 
             md:h-full py-32"
         >
-            {/* IMAGE */}
-            <LandingImgFlipped isAboveLarge={isAboveLarge} />
-
             {/* TEXT AND CONTACT */}
             <div className="z-30 basis-2/5 mt-12 md:mt-32">
 
@@ -33,6 +30,9 @@ const LandingFlipped = ({ setSelectedPage }: Props) => {
                 <SocialMediaBtns btnsInitPos={50} />
 
             </div>
+
+            {/* IMAGE */}
+            <LandingImgFlipped isAboveLarge={isAboveLarge} />
 
         </section>
     );

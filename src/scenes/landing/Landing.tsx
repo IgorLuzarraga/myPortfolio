@@ -19,6 +19,9 @@ const Landing = ({ setSelectedPage }: Props) => {
             className="md:flex mx-auto w-5/6 justify-between items-center gap-16 md:h-full 
             py-32"
         >
+            {/* IMAGE */}
+            <LandingImg isAboveLarge={isAboveLarge} />
+
             {/* TEXT AND CONTACT */}
             <div className="z-30 basis-2/5 mt-12 md:mt-32">
 
@@ -31,8 +34,6 @@ const Landing = ({ setSelectedPage }: Props) => {
 
             </div>
 
-            {/* IMAGE */}
-            <LandingImg isAboveLarge={isAboveLarge} />
         </section>
     );
 };
