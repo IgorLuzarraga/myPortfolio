@@ -8,7 +8,7 @@ const TestimonialsPerson1 = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6 }}
+            transition={{ delay: 0.0, duration: 0.6 }}
             variants={{
                 hidden: { opacity: 0, scale: 0.8 },
                 visible: { opacity: 1, scale: 1 },

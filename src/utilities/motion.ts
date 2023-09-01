@@ -17,7 +17,7 @@ export const textVariant = (delay: string) => {
 };
 
 type InOptions = {
-  direction: "left" | "right" | "up" | "down";
+  direction: "left" | "right" | "up" | "down" | "";
   type: string;
   delay: number;
   duration: number;

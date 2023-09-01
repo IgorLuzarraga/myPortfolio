@@ -87,13 +87,16 @@ const ContactForm = () => {
                     </p>
                 )}
 
-                <button
-                    className="p-5 bg-purple-500 text-deep-blue font-semibold hover:bg-red 
+                <div className="flex justify-center">
+                    <button
+                        className="p-5 bg-purple-500 text-deep-blue font-semibold hover:bg-red 
                     hover:text-white transition duration-500"
-                    type="submit"
-                >
-                    SEND MESSAGE
-                </button>
+                        type="submit"
+                    >
+                        SEND MESSAGE
+                    </button>
+                </div>
+
             </form>
         </motion.div>
     )
