@@ -1,6 +1,7 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { SelectedPage } from "../share/types";
 import { fromSelectedPageToPageHref } from "../utilities/utils";
+import { motion } from "framer-motion";
 
 type ShowDotLinksProps = {
     selectedPage: SelectedPage,
@@ -29,15 +30,29 @@ const ShowDotGroupLinks = ({ selectedPage, setSelectedPage }: ShowDotLinksProps)
     const enumKeys = Object.values(SelectedPage);
 
     return (
-        enumKeys.map(key => (
-            <AnchorLink
-                key={key}
-                href={fromSelectedPageToPageHref(key)}
-                className={`${selectedPage === key ? selectedStyles : "bg-purple-500"
-                    } w-3 h-3 rounded-full`}
-                onClick={() => setSelectedPage(key)}
-            />
-        ))
+        enumKeys.map(key => {
+            return (selectedPage === key)
+                ?
+                <motion.div
+                    key={key}
+                    className={`${selectedStyles} w-3 h-3 rounded-full`}
+                    animate={{ scale: 1.5 }}
+                    transition={{ ease: "easeInOut", duration: 2.0, repeat: Infinity }}
+                >
+                    <AnchorLink
+                        href={fromSelectedPageToPageHref(key)}
+                        onClick={() => setSelectedPage(key)}
+                    />
+                </motion.div>
+                : <AnchorLink
+                    key={key}
+                    href={fromSelectedPageToPageHref(key)}
+                    className="bg-purple-500 w-3 h-3 rounded-full"
+                    onClick={() => setSelectedPage(key)}
+                />
+
+
+        })
     )
 }
 

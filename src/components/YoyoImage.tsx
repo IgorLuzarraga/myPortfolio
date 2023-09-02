@@ -1,7 +1,11 @@
 import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
-function YoyoImage() {
+type Props = {
+    image: string
+}
+
+const YoyoImage = ({ image }: Props) => {
     const controls = useAnimation();
 
     // Define animation keyframes
@@ -56,7 +60,7 @@ function YoyoImage() {
                 initial="initial"
                 animate={controls}
                 variants={animationVariants}
-                src="assets/people/profile-image.jpeg"
+                src={`assets/people/${image}`}
                 alt="Animated Image"
             // style={{ width: '200px', height: '200px' }}
             />

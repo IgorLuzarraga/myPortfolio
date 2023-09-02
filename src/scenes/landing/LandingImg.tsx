@@ -41,7 +41,7 @@ const LandingImg = ({ isAboveLarge }: Props) => {
                         className="hover:filter hover:grayscale transition duration-1000 
                         z-10 h-52 w-52"
                     >
-                        <YoyoImage />
+                        <YoyoImage image="profile-image.jpeg" />
                     </div>
 
                 </div>
