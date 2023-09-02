@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
+import { TextsType } from "../../types/languageTypes";
 
 type Props = {
+    texts: TextsType,
     btnsInitPos: number,
 }
 
-const LandingText = ({ btnsInitPos }: Props) => {
+const LandingText = ({ texts, btnsInitPos }: Props) => {
     return (
         <motion.div
             initial="hidden"
@@ -18,22 +20,21 @@ const LandingText = ({ btnsInitPos }: Props) => {
         >
             <div className="flex justify-center md:justify-normal gap-[15px] text-6xl font-playfair z-10">
                 <p className="text-center md:text-start">
-                    Igor
+                    Igor Luzarraga
                 </p>
 
-                <p
+                {/* <p
                     className="xs:relative text-white md:text-deep-blue xs:font-semibold z-20 
             xs:before:content-brush before:absolute before:-left-[25px] 
             before:-top-[80px] before:z-[-1]"
                 >
                     Luzarraga
-                </p>
+                </p> */}
 
             </div>
 
-            <p className="mt-10 mb-7 text-sm text-center md:text-start">
-                Adipiscing arcu, in aliquam fringilla cursus. Elit arcu elementum
-                viverra malesuada sem ac faucibus dolor. Sagittis scelerisque.
+            <p className="mt-10 mb-7 text-lg text-center md:text-start">
+                {texts.landing.welcome}
             </p>
         </motion.div>
     )

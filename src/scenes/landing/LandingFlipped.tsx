@@ -5,12 +5,15 @@ import ContactMeBtns from "./ContactMeBtns";
 import SocialMediaBtns from "./SocialMediaBtns";
 import LandingText from "./LandingText";
 import LandingImgFlipped from "./LandingImgFlipped";
+import { TextsType } from "../../types/languageTypes";
 
 type Props = {
-    setSelectedPage: (value: SelectedPage) => void
+    setSelectedPage: (value: SelectedPage) => void,
+    texts: TextsType
 }
 
-const LandingFlipped = ({ setSelectedPage }: Props) => {
+
+const LandingFlipped = ({ setSelectedPage, texts }: Props) => {
     const isAboveLarge = useMediaQuery("(min-width: 1060px)")
 
     return (
@@ -20,10 +23,10 @@ const LandingFlipped = ({ setSelectedPage }: Props) => {
             md:h-full py-32"
         >
             {/* TEXT AND CONTACT */}
-            <div className="z-30 basis-2/5 mt-12 md:mt-32">
+            <div className="basis-3/5 mt-12 md:mt-32">
 
                 {/* HEADINGS */}
-                <LandingText btnsInitPos={50} />
+                <LandingText texts={texts} btnsInitPos={50} />
 
                 {/* CONTACT ME*/}
                 <ContactMeBtns setSelectedPage={setSelectedPage} btnsInitPos={50} />
@@ -31,7 +34,7 @@ const LandingFlipped = ({ setSelectedPage }: Props) => {
             </div>
 
             {/* IMAGE AND SOCIAL BTNS*/}
-            <div className="flex flex-col justify-center items-center gap-2">
+            <div className="basis-2/5 flex flex-col justify-center items-center gap-2">
                 <LandingImgFlipped isAboveLarge={isAboveLarge} />
                 <SocialMediaBtns btnsInitPos={50} />
             </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import NavBar from './scenes/navbar';
-import { SelectedPage } from "./share/types";
+import { SelectedPage, SelectedLanguage } from "./share/types";
 import useMediaQuery from "./hooks/useMediaQuery";
 import DotGroup from "./components/DotGroup";
 // import LineGradient from "./components/LineGradient";
@@ -11,19 +11,51 @@ import MySkills from "./scenes/mySkills/MySkills";
 import MySkillsFlipped from "./scenes/mySkills/MySkillsFlipped";
 import Projects from "./scenes/projects/Projects";
 import ProjectsFlipped from "./scenes/projects/ProjectsFlipped";
-// import Testimonials from "./scenes/testimonials/Testimonials";
 import Testimonials2 from "./scenes/testimonials/Testimonials2";
 import Testimonials2Flipped from "./scenes/testimonials/Testimonials2Flipped";
 import Contact from "./scenes/contact/Contact";
 import ContactFlipped from "./scenes/contact/ContactFlipped";
 import Footer from "./scenes/footer/Footer";
 import FooterFlipped from "./scenes/footer/FooterFlipped";
+import { TextsType } from "./types/languageTypes";
+import { engTexts, espTexts } from './data/appTexts'
+
+const initTexts: TextsType = {
+  landing: {
+    welcome: "Welcome",
+  }
+}
+
+const importAppTexts = (selectedLanguage: SelectedLanguage) => {
+  let texts
+
+  switch (selectedLanguage) {
+    case SelectedLanguage.English:
+      texts = engTexts
+      break;
+    case SelectedLanguage.Spanish:
+      texts = espTexts
+      break;
+    default:
+      texts = engTexts
+  }
+
+  return texts
+}
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
+  const [selectedLanguage] = useState<SelectedLanguage>(SelectedLanguage.Spanish)
+  const [texts, setTexts] = useState<TextsType>(initTexts)
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
   const isDesktop = useMediaQuery("(min-width: 1060px")
   const [isAppFlipped, setIsAppFlipped] = useState<boolean>(false)
+
+  useEffect(() => {
+    const texts = importAppTexts(selectedLanguage)
+
+    setTexts(texts)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,8 +90,15 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
-          {!isAppFlipped ? <Landing setSelectedPage={setSelectedPage} />
-            : <LandingFlipped setSelectedPage={setSelectedPage} />
+          {!isAppFlipped
+            ? <Landing
+              setSelectedPage={setSelectedPage}
+              texts={texts}
+            />
+            : <LandingFlipped
+              setSelectedPage={setSelectedPage}
+              texts={texts}
+            />
           }
 
         </motion.div>

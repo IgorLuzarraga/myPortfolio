@@ -4,7 +4,7 @@ type Props = {
 
 const LandingImg = ({ isAboveLarge }: Props) => {
     return (
-        <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center">
+        <div className="z-10 mt-16 md:mt-32 flex justify-center">
             {isAboveLarge ? (
                 <div
                     className="relative before:absolute before:-top-5 

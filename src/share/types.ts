@@ -5,3 +5,9 @@ export enum SelectedPage {
     Testimonials = "testimonials",
     Contact = "contact"
 }
+
+
+export enum SelectedLanguage {
+    English = "english",
+    Spanish = "spanish",
+}
