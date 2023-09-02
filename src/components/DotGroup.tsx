@@ -1,6 +1,6 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { SelectedPage } from "../share/types";
-import { fromSelectedPageToPageName } from "../utilities/utils";
+import { fromSelectedPageToPageHref } from "../utilities/utils";
 
 type ShowDotLinksProps = {
     selectedPage: SelectedPage,
@@ -32,7 +32,7 @@ const ShowDotGroupLinks = ({ selectedPage, setSelectedPage }: ShowDotLinksProps)
         enumKeys.map(key => (
             <AnchorLink
                 key={key}
-                href={hrefLink(selectedPage)}
+                href={fromSelectedPageToPageHref(key)}
                 className={`${selectedPage === key ? selectedStyles : "bg-purple-500"
                     } w-3 h-3 rounded-full`}
                 onClick={() => setSelectedPage(key)}
@@ -40,9 +40,5 @@ const ShowDotGroupLinks = ({ selectedPage, setSelectedPage }: ShowDotLinksProps)
         ))
     )
 }
-
-const hrefLink = (selectedPage: SelectedPage) =>
-    `#${fromSelectedPageToPageName(selectedPage)}`
-
 
 export default DotGroup;

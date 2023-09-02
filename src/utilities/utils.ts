@@ -1,5 +1,6 @@
-import { SelectedPage } from "../share/types"
+import { SelectedPage, SelectedLanguage } from "../share/types"
 import { pipe } from 'fp-ts/lib/function'
+import { engTexts, espTexts } from '../data/appTexts'
 
 export const fromSelectedPageToPageName = (selectedPage: SelectedPage) => {
     switch (selectedPage) {
@@ -18,7 +19,7 @@ export const fromSelectedPageToPageName = (selectedPage: SelectedPage) => {
 
 const addSimbolPrefix = (input: string, simbol: string): string => `${simbol}${input}`
 
-const addHashPrefix = (input: string): string => addSimbolPrefix('#', input)
+const addHashPrefix = (input: string): string => addSimbolPrefix(input, '#')
 
 const toLowerCase = (input: string): string => input.toLowerCase();
 
@@ -27,3 +28,24 @@ export const fromSelectedPageToPageId = (selectedPage: SelectedPage) =>
 
 export const fromSelectedPageToPageHref = (selectedPage: SelectedPage) =>
     pipe(selectedPage, fromSelectedPageToPageName, toLowerCase, addHashPrefix)
+
+// ------------------------------------------
+
+export const importAppTexts = (selectedLanguage: SelectedLanguage) => {
+    let texts
+
+    switch (selectedLanguage) {
+        case SelectedLanguage.English:
+            texts = engTexts
+            break;
+        case SelectedLanguage.Spanish:
+            texts = espTexts
+            break;
+        default:
+            texts = engTexts
+    }
+
+    return texts
+}
+
+// ------------------------------------------
