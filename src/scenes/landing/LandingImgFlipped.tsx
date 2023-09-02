@@ -1,3 +1,5 @@
+import YoyoImage from "../../components/YoyoImage"
+
 type Props = {
     isAboveLarge: boolean,
 }
@@ -11,12 +13,20 @@ const LandingImgFlipped = ({ isAboveLarge }: Props) => {
                 before:-left-5 before:rounded-full before:w-full before:h-full 
                 before:border-2 before:border-purple-500 before:z-[-1]"
                 >
-                    <img
+                    {/* <img
                         alt="profile image"
                         className="hover:filter hover:saturate-200 transition duration-1000 
                 z-10 h-52 w-52 rounded-full object-cover"
                         src="assets/people/profile-image.jpeg"
-                    />
+                    /> */}
+
+                    <div
+                        className="hover:filter hover:grayscale transition duration-1000 
+                        z-10 h-52 w-52"
+                    >
+                        <YoyoImage />
+                    </div>
+
                 </div>
             ) : (
                 <img
