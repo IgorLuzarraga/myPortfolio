@@ -1,4 +1,4 @@
-import PulseHeart from "./PulseHeart.tsx"
+import MadeWithLove from "../../components/MadeWithLove.tsx"
 
 const FooterCopyRight = () => {
     return (
@@ -7,29 +7,7 @@ const FooterCopyRight = () => {
                 Igor <span className="text-purple-500">Luzarraga</span>
             </p>
 
-            <div className="flex justify-center gap-2 font-playfair text-xl text-white">
-                <p>Made with </p>
-                <a
-                    href="https://en.wikipedia.org/wiki/Barcelona"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <PulseHeart />
-                </a>
-
-                <p className="flex gap-1">
-                    in
-                    <a
-                        className="hover:opacity-50 transition duration-500"
-                        href="https://en.wikipedia.org/wiki/Barcelona"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        Barcelona
-                    </a>
-
-                </p>
-            </div>
+            <MadeWithLove />
         </div>
     )
 }
