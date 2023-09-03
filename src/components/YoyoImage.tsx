@@ -54,17 +54,14 @@ const YoyoImage = ({ image }: Props) => {
     }, []);
 
     return (
-        <div>
-            <motion.img
-                className='rounded-full object-cover h-48 w-48'
-                initial="initial"
-                animate={controls}
-                variants={animationVariants}
-                src={`assets/people/${image}`}
-                alt="Animated Image"
-            // style={{ width: '200px', height: '200px' }}
-            />
-        </div>
+        <motion.img
+            className='rounded-full object-cover h-48 w-48'
+            initial="initial"
+            animate={controls}
+            variants={animationVariants}
+            src={`assets/people/${image}`}
+            alt="Animated Image"
+        />
     );
 }
 

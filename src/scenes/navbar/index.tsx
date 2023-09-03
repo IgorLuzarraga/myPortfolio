@@ -3,6 +3,7 @@ import useMediaQuery from '../../hooks/useMediaQuery'
 import NavAvobeMediumScreen from "./NavAvobeMediumScreen"
 import NavSmallScreen from "./NavSmallScreen"
 import BtnFlipApp from "./BtnFlipApp"
+import ShowLogo from "../../components/ShowLogo"
 
 type Props = {
     isTopOfPage: boolean,
@@ -11,6 +12,15 @@ type Props = {
     isAppFlipped: boolean,
     setIsAppFlipped: (value: boolean) => void,
 }
+
+// const ProfileImg = () => {
+//     return <img
+//         alt="profile image"
+//         className="hover:filter hover:grayscale transition duration-1000 
+//     h-14 w-14 rounded-full object-cover"
+//         src="assets/people/profile-image.jpeg"
+//     />
+// }
 
 const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, isAppFlipped, setIsAppFlipped }: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px")
@@ -25,7 +35,8 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, isAppFlipped, setI
                         {!isAppFlipped
                             ?
                             <>
-                                <h4 className="font-playfair text-3xl font-bold">IL</h4>
+                                <ShowLogo selectedPage={selectedPage} />
+
                                 <BtnFlipApp isAppFlipped={isAppFlipped} setIsAppFlipped={setIsAppFlipped} />
                                 <NavAvobeMediumScreen
                                     selectedPage={selectedPage}
@@ -39,13 +50,13 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, isAppFlipped, setI
                                     setSelectedPage={setSelectedPage}
                                 />
                                 <BtnFlipApp isAppFlipped={isAppFlipped} setIsAppFlipped={setIsAppFlipped} />
-                                <h4 className="font-playfair text-3xl font-bold">IL</h4>
+                                <ShowLogo selectedPage={selectedPage} />
                             </>
                         }
                     </>
                     :
                     <>
-                        <h4 className="font-playfair text-3xl font-bold">IL</h4>
+                        <ShowLogo selectedPage={selectedPage} />
                         <NavSmallScreen
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
@@ -57,5 +68,11 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage, isAppFlipped, setI
         </nav>
     )
 }
+
+// const showProfileImg = () =>
+//     <div className="flex justify-center items-center gap-3">
+//         <h4 className="font-playfair text-3xl font-bold">IL</h4>
+//         <ProfileImg />
+//     </div>
 
 export default NavBar
