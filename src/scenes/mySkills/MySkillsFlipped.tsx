@@ -21,7 +21,7 @@ const MySkillsFlipped = () => {
             </div>
 
             {/* SKILLS */}
-            <div className="md:flex md:justify-between mt-16 gap-32">
+            <div className="md:flex md:justify-between mt-16 gap-8">
 
                 {/* IMAGINATIVE */}
                 <MySkillsImaginative />

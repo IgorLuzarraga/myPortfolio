@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const MySkillsInnovative = () => {
     return (
         <motion.div
-            className="md:w-1/3 mt-10"
+            className='bg-card-color p-10 rounded-3xl xs:w-[320px] md:w-1/3'
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.5 }}
@@ -13,21 +13,16 @@ const MySkillsInnovative = () => {
                 visible: { opacity: 1, y: 0 },
             }}
         >
-            <div className="relative h-32">
-                <div className="z-10">
-                    <p className="font-playfair font-semibold text-5xl">02</p>
-                    <p className="font-playfair font-semibold text-3xl mt-3">
-                        Innovative
-                    </p>
-                </div>
-                {/* <div className="w-1/2 md:w-3/4 h-32 bg-myRed absolute right-0 top-0 z-[-1]" /> */}
-                <div className="w-1/2 md:w-3/4 h-32 bg-myRed absolute right-0 top-0 z-20 md:bg-opacity-70"></div>
-            </div>
-            <p className="mt-5">
-                Urna, eget pulvinar dolor cursus volutpat dictum odio. Nec ultricies
-                amet in in neque nibh tortor. Libero sed pretium justo nulla blandit
-                nulla amet habitant iaculis. Iaculis in congue vitae sollicitudin
-                faucibus a
+            <p className="font-playfair font-semibold text-3xl h-28 mt-3">
+                Innovative
+            </p>
+
+            <p className="mt-0">
+                From my early days diving into the world of programming, I've journeyed through
+                TypeScript and JavaScript, honing my skills with a focus on React. This progression
+                has empowered me to confidently navigate front-end finesse and dive into back-end
+                complexities, making me a capable candidate across junior, mid, and senior
+                development roles.
             </p>
         </motion.div>
     )
