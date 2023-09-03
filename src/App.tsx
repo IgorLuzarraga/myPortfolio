@@ -18,12 +18,12 @@ import ContactFlipped from "./scenes/contact/ContactFlipped";
 import Footer from "./scenes/footer/Footer";
 import FooterFlipped from "./scenes/footer/FooterFlipped";
 import { TextsType } from "./types/languageTypes";
-// import { engTexts, espTexts } from './data/appTexts'
 import { importAppTexts } from "./utilities/utils";
 
 const initTexts: TextsType = {
   landing: {
     welcome: "Welcome",
+    contactBtn: "Let's talk",
   }
 }
 

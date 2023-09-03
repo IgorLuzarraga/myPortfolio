@@ -73,10 +73,4 @@ const NavBar = ({
     )
 }
 
-// const showProfileImg = () =>
-//     <div className="flex justify-center items-center gap-3">
-//         <h4 className="font-playfair text-3xl font-bold">IL</h4>
-//         <ProfileImg />
-//     </div>
-
 export default NavBar
