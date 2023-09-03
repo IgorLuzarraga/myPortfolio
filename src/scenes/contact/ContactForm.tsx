@@ -21,7 +21,7 @@ const ContactForm = () => {
         <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{ delay: 0.5, duration: 1.8 }}
             variants={{
                 hidden: { opacity: 0, y: 100 },
