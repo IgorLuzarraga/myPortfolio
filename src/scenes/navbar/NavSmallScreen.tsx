@@ -44,14 +44,15 @@ const NavSmallScreen = ({ selectedPage, setSelectedPage }: Props) => {
 
 const Btn3Bars = ({ isMenuToggled, setIsMenuToggled }: Btn3BarsProps) =>
     <button
-        className='rounded-full bg-myRed'
+        className='flex justify-center items-center rounded-full bg-purple-500 w-8 h-8'
         onClick={() => setIsMenuToggled(!isMenuToggled)}
     >
         <Bars3Icon className='w-6 h-6 text-white' />
     </button>
 
 const ModalMenu = ({ selectedPage, setSelectedPage, isMenuToggled, setIsMenuToggled }: ModalMenuProps) =>
-    <div className='fixed right-0 bottom-0 z-40 h-full w-[300px] bg-myBlue drop-shadow-xl'>
+    <div className='fixed right-0 bottom-0 z-40 h-full opacity-95 w-[180px] 
+    bg-modal-menu-color drop-shadow-xl'>
         {/* CLOSE ICON */}
         <div className='flex justify-end p-12'>
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
@@ -60,13 +61,15 @@ const ModalMenu = ({ selectedPage, setSelectedPage, isMenuToggled, setIsMenuTogg
         </div>
 
         {/* MENU ITEMS */}
-        <div className='ml-[33%] flex flex-col gap-10 text-2xl'>
+        <div className='ml-[18%] flex flex-col gap-10 text-2xl text-purple-500'>
+
             <Link
                 // page Home
                 page={SelectedPage.Home}
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
             />
+
             <Link
                 // page Skills
                 page={SelectedPage.Skills}

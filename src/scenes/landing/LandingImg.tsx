@@ -25,7 +25,7 @@ const LandingImg = ({ isAboveLarge }: Props) => {
                 <img
                     alt="profile image"
                     className="hover:filter hover:grayscale transition duration-1000 
-                    z-10 h-52 w-52 rounded-full object-cover"
+                    z-10 h-44 w-44 rounded-full object-cover"
                     src="assets/people/profile-image.jpeg"
                 />
             )}
