@@ -21,23 +21,33 @@ const ContactMeBtns = ({ btnsInitPos, setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
             }}
         >
-            <AnchorLink
+            {/* <AnchorLink
                 className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 
                         font-semibold hover:bg-blue hover:text-white transition duration-500"
                 onClick={() => setSelectedPage(SelectedPage.Contact)}
                 href={fromSelectedPageToPageHref(SelectedPage.Contact)}
             >
                 Contact Me
-            </AnchorLink>
+            </AnchorLink> */}
 
-            <AnchorLink
-                className="rounded-r-sm bg-gradient-green-pink py-0.5 pr-0.5"
+            {/* <AnchorLink
+                className="rounded bg-gradient-green-pink py-0.5 p-0.5"
                 onClick={() => setSelectedPage(SelectedPage.Contact)}
                 href={fromSelectedPageToPageHref(SelectedPage.Contact)}
             >
-                <div className="bg-deep-blue hover:text-myRed transition duration-500 w-full h-full flex items-center justify-center px-10 font-playfair">
+                <div className="bg-deep-blue hover:text-myRed transition duration-500 
+                w-full h-full flex items-center justify-center px-10 py-3 font-playfair">
                     Let's talk
                 </div>
+            </AnchorLink> */}
+
+            <AnchorLink
+                className="p-5 bg-btn-color text-white font-semibold hover:bg-red 
+                    hover:text-purple-500 transition duration-500 uppercase"
+                onClick={() => setSelectedPage(SelectedPage.Contact)}
+                href={fromSelectedPageToPageHref(SelectedPage.Contact)}
+            >
+                Let's talk
             </AnchorLink>
         </motion.div>
     )

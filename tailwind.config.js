@@ -15,6 +15,7 @@ module.exports = {
         "nav-color": "rgb(21,16,48)",
         "footer-color": "rgb(21,16,48)",
         "modal-menu-color": "rgb(21,16,48)",
+        "btn-color": "rgb(21,16,48)",
         grey: "#ededed",
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",

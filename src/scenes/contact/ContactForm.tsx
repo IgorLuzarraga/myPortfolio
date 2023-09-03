@@ -89,8 +89,8 @@ const ContactForm = () => {
 
                 <div className="flex justify-center">
                     <button
-                        className="p-5 bg-purple-500 text-deep-blue font-semibold hover:bg-red 
-                    hover:text-white transition duration-500"
+                        className="p-5 bg-btn-color text-white font-semibold hover:bg-red 
+                    hover:text-purple-500 transition duration-500"
                         type="submit"
                     >
                         SEND MESSAGE
