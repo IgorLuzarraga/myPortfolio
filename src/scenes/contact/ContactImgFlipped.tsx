@@ -13,7 +13,8 @@ const ContactImgFlipped = () => {
             }}
             className="basis-1/2 flex justify-end"
         >
-            <img src="../assets/contact-image.jpeg" alt="contact" />
+            {/* <img src="../assets/contact-image.jpeg" alt="contact" /> */}
+            <img src="assets/bg-images/network.jpg" alt="contact" />
         </motion.div>
 
     )
