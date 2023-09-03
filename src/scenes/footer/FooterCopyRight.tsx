@@ -4,7 +4,7 @@ const FooterCopyRight = () => {
     return (
         <div className="md:flex md:justify-between text-center">
             <p className="uppercase font-playfair text-2xl text-white">
-                Igor Luzarraga
+                Igor <span className="text-purple-500">Luzarraga</span>
             </p>
 
             <div className="flex justify-center gap-2 font-playfair text-xl text-white">

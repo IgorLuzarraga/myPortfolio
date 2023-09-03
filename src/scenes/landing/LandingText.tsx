@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { TextsType } from "../../types/languageTypes";
+import LineGradient from "../../components/LineGradient";
 
 type Props = {
     texts: TextsType,
@@ -19,9 +20,14 @@ const LandingText = ({ texts, btnsInitPos }: Props) => {
             }}
         >
             <div className="flex justify-center md:justify-normal gap-[15px] text-6xl font-playfair z-10">
-                <p className="text-center md:text-start">
-                    Igor Luzarraga
-                </p>
+                <div className="flex gap-1 text-center md:text-start">
+                    <span>Igor </span>
+                    <div className="flex flex-col gap-5">
+                        <span className="text-purple-500">Luzarraga</span>
+                        <LineGradient />
+                    </div>
+
+                </div>
 
                 {/* <p
                     className="xs:relative text-white md:text-deep-blue xs:font-semibold z-20 

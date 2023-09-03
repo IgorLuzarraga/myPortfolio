@@ -19,7 +19,7 @@ const ContactHeading = ({ headingInitPos }: Props) => {
         >
             <div>
                 <p className="font-playfair font-semibold text-4xl">
-                    <span className="text-white">LET'S BEGIN</span>
+                    <span>LET'S </span><span className="text-purple-500">BEGIN</span>
                 </p>
                 <div className="flex md:justify-end my-5">
                     <LineGradient width="w-1/2" />

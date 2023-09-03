@@ -28,7 +28,7 @@ const FooterCopyRight = () => {
             </div>
 
             <p className="uppercase font-playfair text-2xl text-white">
-                Igor Luzarraga
+                Igor <span className="text-purple-500">Luzarraga</span>
             </p>
         </div>
     )

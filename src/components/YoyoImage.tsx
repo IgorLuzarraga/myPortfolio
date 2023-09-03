@@ -16,13 +16,13 @@ const YoyoImage = ({ image }: Props) => {
         animate: {
             y: 50, // End position 
             transition: {
-                duration: 2, // Animation duration
+                duration: 5, // Animation duration
             },
         },
         yoyo: {
             y: -50, // Back to the initial position
             transition: {
-                duration: 2, // Animation duration
+                duration: 5, // Animation duration
             },
         },
     };

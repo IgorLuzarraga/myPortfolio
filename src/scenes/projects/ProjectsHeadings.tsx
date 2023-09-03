@@ -17,7 +17,7 @@ const ProjectsHeadings = () => {
         >
             <div>
                 <p className="font-playfair font-semibold text-4xl">
-                    <span className="text-myRed">PRO</span>JECTS
+                    <span>PRO</span><span className="text-purple-500">JECTS</span>
                 </p>
                 <div className="flex justify-center mt-5">
                     <LineGradient width="w-2/3" />

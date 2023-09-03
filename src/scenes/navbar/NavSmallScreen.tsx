@@ -25,11 +25,11 @@ const NavSmallScreen = ({ selectedPage, setSelectedPage }: Props) => {
 
     return (
         <div className='flex items-center justify-between'>
-            <Btn3Bars
+            {!isMenuToggled && <Btn3Bars
                 isMenuToggled={isMenuToggled}
                 setIsMenuToggled={setIsMenuToggled}
             />
-
+            }
             {/* MODAL MENU */}
             {isMenuToggled && (<ModalMenu
                 selectedPage={selectedPage}
@@ -51,7 +51,7 @@ const Btn3Bars = ({ isMenuToggled, setIsMenuToggled }: Btn3BarsProps) =>
     </button>
 
 const ModalMenu = ({ selectedPage, setSelectedPage, isMenuToggled, setIsMenuToggled }: ModalMenuProps) =>
-    <div className='fixed right-0 bottom-0 z-40 h-full opacity-95 w-[180px] 
+    <div className='fixed right-0 bottom-0 z-40 h-full opacity-80 w-[180px] 
     bg-modal-menu-color drop-shadow-xl'>
         {/* CLOSE ICON */}
         <div className='flex justify-end p-12'>
