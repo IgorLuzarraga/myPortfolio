@@ -26,9 +26,9 @@ const Projects = () => {
             <ProjectsHeadings />
 
             {/* PROJECTS */}
-            <div className="flex justify-center">
+            <div className="flex flex-col justify-center items-center gap-5">
                 <motion.div
-                    className="sm:grid sm:grid-cols-3 gap-5"
+                    className="flex flex-col justify-center items-center gap-8 sm:grid sm:grid-cols-3 sm:gap-5"
                     variants={container}
                     initial="hidden"
                     whileInView="visible"

@@ -29,7 +29,7 @@ const initTexts: TextsType = {
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
-  const [selectedLanguage] = useState<SelectedLanguage>(SelectedLanguage.Spanish)
+  const [selectedLanguage, setSelectedLanguage] = useState<SelectedLanguage>(SelectedLanguage.English)
   const [texts, setTexts] = useState<TextsType>(initTexts)
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
   const isDesktop = useMediaQuery("(min-width: 1060px")
@@ -39,7 +39,7 @@ function App() {
     const texts = importAppTexts(selectedLanguage)
 
     setTexts(texts)
-  }, [])
+  }, [selectedLanguage])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,6 +60,8 @@ function App() {
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
+        selectedLanguage={selectedLanguage}
+        setSelectedLanguage={setSelectedLanguage}
         isAppFlipped={isAppFlipped}
         setIsAppFlipped={setIsAppFlipped}
       />
