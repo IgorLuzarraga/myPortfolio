@@ -38,7 +38,7 @@ const ContactForm = () => {
                 <input
                     className={inputStyles}
                     type="text"
-                    placeholder="NAME"
+                    placeholder="Your name"
                     {...register("name", {
                         required: true,
                         maxLength: 100,
@@ -54,7 +54,7 @@ const ContactForm = () => {
                 <input
                     className={inputStyles}
                     type="text"
-                    placeholder="EMAIL"
+                    placeholder="Your email"
                     {...register("email", {
                         required: true,
                         pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -69,7 +69,7 @@ const ContactForm = () => {
 
                 <textarea
                     className={inputStyles}
-                    placeholder="MESSAGE"
+                    placeholder="Message to send"
                     cols={50}
                     rows={4}
                     {...register("message", {
