@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { SelectedLanguage } from '../share/types'
 import { XMarkIcon } from '@heroicons/react/20/solid'
 import { TbMessageLanguage } from 'react-icons/tb'
+import { useAppContext } from '../context/AppContext'
+
 
 type Props = {
     selectedLanguage: SelectedLanguage,
@@ -51,36 +53,43 @@ const BtnSelectLanguage = ({ isMenuToggled, setIsMenuToggled }: BtnSelectLanguag
         <TbMessageLanguage className='w-6 h-6' />
     </button>
 
-const ModalMenu = ({ isMenuToggled, setIsMenuToggled, selectedLanguage, setSelectedLanguage }: ModalMenuProps) =>
-    <div className='fixed right-0 top-0 h-1/3 z-40 opacity-70 w-[160px] 
-    bg-modal-menu-color drop-shadow-xl'>
+const ModalMenu = ({ isMenuToggled, setIsMenuToggled, selectedLanguage, setSelectedLanguage }: ModalMenuProps) => {
+    const { state } = useAppContext();
+    const posHorizontal = state.appFlipped === "notFlipped" ? 'right-0' : 'left-0'
 
-        {/* CLOSE ICON */}
-        <div className='flex justify-end p-12'>
-            <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                <XMarkIcon className='h-8 w-8 text-white' />
-            </button>
-        </div>
+    return (
+        <div className={`fixed top-0 ${posHorizontal} h-1/3 z-40 opacity-70 w-[160px] 
+        bg-modal-menu-color drop-shadow-xl`}
+        >
 
-        {/* MENU ITEMS */}
-        <div className='ml-[18%] flex flex-col gap-10 text-xl text-purple-500'>
-            <div
-                className={`${selectedLanguage === SelectedLanguage.English ? "text-white" : ""}
+            {/* CLOSE ICON */}
+            <div className='flex justify-end p-12'>
+                <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                    <XMarkIcon className='h-8 w-8 text-white' />
+                </button>
+            </div>
+
+            {/* MENU ITEMS */}
+            <div className='ml-[18%] flex flex-col gap-10 text-xl text-purple-500'>
+                <div
+                    className={`${selectedLanguage === SelectedLanguage.English ? "text-white" : ""}
               hover:text-white transition duration-500 
                 hover:cursor-pointer`}
-                onClick={() => setSelectedLanguage(SelectedLanguage.English)}
-            >
-                English
-            </div>
-            <div
-                className={`${selectedLanguage === SelectedLanguage.Spanish ? "text-white" : ""}
+                    onClick={() => setSelectedLanguage(SelectedLanguage.English)}
+                >
+                    English
+                </div>
+                <div
+                    className={`${selectedLanguage === SelectedLanguage.Spanish ? "text-white" : ""}
               hover:text-white transition duration-500 
                 hover:cursor-pointer`}
-                onClick={() => setSelectedLanguage(SelectedLanguage.Spanish)}
-            >
-                Spanish
+                    onClick={() => setSelectedLanguage(SelectedLanguage.Spanish)}
+                >
+                    Spanish
+                </div>
             </div>
         </div>
-    </div>
+    )
+}
 
 export default ModalLanguageMenu

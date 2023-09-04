@@ -5,11 +5,9 @@ import ContactMeBtns from "./ContactMeBtns";
 import SocialMediaBtns from "./SocialMediaBtns";
 import LandingText from "./LandingText";
 import LandingImgFlipped from "./LandingImgFlipped";
-// import { TextsType } from "../../types/languageTypes";
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void,
-    // texts: TextsType
 }
 
 

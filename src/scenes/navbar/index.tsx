@@ -5,6 +5,7 @@ import NavSmallScreen from "./NavSmallScreen"
 import BtnFlipApp from "../../components/BtnFlipApp"
 import ShowLogo from "../../components/ShowLogo"
 import ModalLanguageMenu from "../../components/ModalLanguageMenu"
+import { useAppContext } from '../../context/AppContext';
 
 type Props = {
     isTopOfPage: boolean,
@@ -12,8 +13,6 @@ type Props = {
     setSelectedPage: (value: SelectedPage) => void,
     selectedLanguage: SelectedLanguage,
     setSelectedLanguage: (value: SelectedLanguage) => void,
-    isAppFlipped: boolean,
-    setIsAppFlipped: (value: boolean) => void,
 }
 
 const NavBar = ({
@@ -22,11 +21,10 @@ const NavBar = ({
     setSelectedPage,
     selectedLanguage,
     setSelectedLanguage,
-    isAppFlipped,
-    setIsAppFlipped
 }: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px")
     const navbarBackground = isTopOfPage ? "" : "bg-nav-color shadow-2xl"
+    const { state } = useAppContext();
 
     return (
         <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
@@ -34,7 +32,7 @@ const NavBar = ({
 
                 {isAboveMediumScreens
                     ? <>
-                        {!isAppFlipped
+                        {state.appFlipped === "notFlipped"
                             ?
                             <>
                                 <ShowLogo selectedPage={selectedPage} />
@@ -43,17 +41,20 @@ const NavBar = ({
                                     setSelectedPage={setSelectedPage}
                                 />
                                 <div className="flex justify-center gap-10">
-                                    <BtnFlipApp isAppFlipped={isAppFlipped} setIsAppFlipped={setIsAppFlipped} />
+                                    <BtnFlipApp />
                                     <ModalLanguageMenu selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
                                 </div>
                             </>
                             :
                             <>
+                                <div className="flex justify-center gap-10">
+                                    <ModalLanguageMenu selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
+                                    <BtnFlipApp />
+                                </div>
                                 <NavAvobeMediumScreen
                                     selectedPage={selectedPage}
                                     setSelectedPage={setSelectedPage}
                                 />
-                                <BtnFlipApp isAppFlipped={isAppFlipped} setIsAppFlipped={setIsAppFlipped} />
                                 <ShowLogo selectedPage={selectedPage} />
                             </>
                         }

@@ -18,14 +18,17 @@ import Footer from "./scenes/footer/Footer";
 import FooterFlipped from "./scenes/footer/FooterFlipped";
 import { importAppTexts } from "./utilities/utils";
 import { useAppContext } from './context/AppContext';
+import { AppState } from "./types/appType";
+
+const isAppFlipped = (state: AppState) =>
+  state.appFlipped === "notFlipped"
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
   const [selectedLanguage, setSelectedLanguage] = useState<SelectedLanguage>(SelectedLanguage.English)
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
   const isDesktop = useMediaQuery("(min-width: 1060px")
-  const [isAppFlipped, setIsAppFlipped] = useState<boolean>(false)
-  const { dispatch } = useAppContext();
+  const { state, dispatch } = useAppContext();
 
   useEffect(() => {
     const texts = importAppTexts(selectedLanguage)
@@ -54,12 +57,10 @@ function App() {
         setSelectedPage={setSelectedPage}
         selectedLanguage={selectedLanguage}
         setSelectedLanguage={setSelectedLanguage}
-        isAppFlipped={isAppFlipped}
-        setIsAppFlipped={setIsAppFlipped}
       />
 
       {isDesktop && (
-        !isAppFlipped
+        !isAppFlipped(state)
           ? <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} position="right-7" />
           : <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} position="left-7" />
       )}
@@ -68,7 +69,7 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
-          {!isAppFlipped
+          {state.appFlipped === "notFlipped"
             ? <Landing
               setSelectedPage={setSelectedPage}
             />
@@ -84,7 +85,7 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
         >
-          {!isAppFlipped ? <MySkills /> : <MySkillsFlipped />}
+          {!isAppFlipped(state) ? <MySkills /> : <MySkillsFlipped />}
 
         </motion.div>
       </div>
@@ -93,7 +94,7 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
         >
-          {!isAppFlipped ? <Projects /> : <ProjectsFlipped />}
+          {!isAppFlipped(state) ? <Projects /> : <ProjectsFlipped />}
 
         </motion.div>
       </div>
@@ -103,7 +104,7 @@ function App() {
           onViewportEnter={() => setSelectedPage(SelectedPage.Testimonials)}
         >
 
-          {!isAppFlipped ? <Testimonials2 /> : <Testimonials2Flipped />}
+          {!isAppFlipped(state) ? <Testimonials2 /> : <Testimonials2Flipped />}
 
         </motion.div>
       </div>
@@ -113,12 +114,12 @@ function App() {
           onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
         >
 
-          {!isAppFlipped ? <Contact /> : <ContactFlipped />}
+          {!isAppFlipped(state) ? <Contact /> : <ContactFlipped />}
 
         </motion.div>
       </div>
 
-      {!isAppFlipped ? <Footer /> : <FooterFlipped />}
+      {!isAppFlipped(state) ? <Footer /> : <FooterFlipped />}
 
     </div>
   );

@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import LineGradient from "../../components/LineGradient"
+import { useAppContext } from '../../context/AppContext';
+import SimpleTextFormat from "../../components/textFormat/SimpleTextFormat";
+import TitleFormat from "../../components/textFormat/TitleFormat";
 
 const MySkillsText = () => {
+    const { state } = useAppContext();
+
     return (
         <motion.div
             className="md:w-1/3"
@@ -14,15 +19,15 @@ const MySkillsText = () => {
                 visible: { opacity: 1, x: 0 },
             }}
         >
-            <p className="font-playfair font-semibold text-4xl mb-5">
-                MY <span className="text-purple-500">SKILLS</span>
-            </p>
+            <TitleFormat
+                titlePart1={state.texts.mySkills.titlePart1}
+                titlePart2={state.texts.mySkills.titlePart2}
+            />
 
             <LineGradient width="w-1/3" />
 
             <p className="mt-10 mb-7">
-                Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-                fames odio in at.
+                <SimpleTextFormat text={state.texts.mySkills.heading} />
             </p>
         </motion.div>
     )

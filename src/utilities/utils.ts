@@ -49,3 +49,9 @@ export const importAppTexts = (selectedLanguage: SelectedLanguage) => {
 }
 
 // ------------------------------------------
+
+export const getTextFirstLine = (text: string) =>
+    text.split('.')[0] + '.'
+
+export const getTextExceptFirstLine = (text: string) =>
+    text.substring(text.indexOf('.') + 1)

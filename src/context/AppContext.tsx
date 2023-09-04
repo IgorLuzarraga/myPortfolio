@@ -1,27 +1,40 @@
 import { createContext, useReducer, useContext, ReactNode } from 'react';
 import { TextsType } from '../types/languageTypes'
+import { AppFlipType } from '../types/appType';
+import { AppState } from '../types/appType';
 
-// Define the state shape
-interface AppState {
-    texts: TextsType;
-}
+const initAppFlippedState: AppFlipType = "notFlipped"
 
 const initTexts: TextsType = {
     landing: {
         welcome: "Welcome",
         contactBtn: "Let's talk",
+    },
+    mySkills: {
+        titlePart1: "SK",
+        titlePart2: "ILLS",
+        heading: "These are my web skills",
+        skill1Title: "Experiencia",
+        skill1Desc: "string",
+        skill2Title: "string",
+        skill2Desc: "string",
+        skill3Title: "string",
+        skill3Desc: "string",
     }
 }
 
 // Define action types
-type Action = {
-    type: 'setTexts',
-    payload: TextsType
-};
+type Action =
+    | {
+        type: 'setTexts',
+        payload: TextsType
+    }
+    | { type: 'setFlipApp', payload: AppFlipType };
 
 // Initial state
 const initialState: AppState = {
     texts: initTexts,
+    appFlipped: initAppFlippedState
 };
 
 // Create the context
@@ -31,7 +44,9 @@ const AppContext = createContext<{ state: AppState; dispatch: React.Dispatch<Act
 function reducer(state: AppState, action: Action): AppState {
     switch (action.type) {
         case 'setTexts':
-            return { texts: action.payload };
+            return { ...state, texts: action.payload };
+        case 'setFlipApp':
+            return { ...state, appFlipped: action.payload };
         default:
             return state;
     }

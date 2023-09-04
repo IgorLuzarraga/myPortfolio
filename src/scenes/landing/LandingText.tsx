@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
-// import { TextsType } from "../../types/languageTypes";
 import LineGradient from "../../components/LineGradient";
 import { useAppContext } from '../../context/AppContext';
 
 type Props = {
-    // texts: TextsType,
     btnsInitPos: number,
 }
 
@@ -31,15 +29,6 @@ const LandingText = ({ btnsInitPos }: Props) => {
                     </div>
 
                 </div>
-
-                {/* <p
-                    className="xs:relative text-white md:text-deep-blue xs:font-semibold z-20 
-            xs:before:content-brush before:absolute before:-left-[25px] 
-            before:-top-[80px] before:z-[-1]"
-                >
-                    Luzarraga
-                </p> */}
-
             </div>
 
             <p className="mt-10 mb-7 text-lg text-center md:text-start">
