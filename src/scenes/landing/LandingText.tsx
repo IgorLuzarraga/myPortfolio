@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
-import { TextsType } from "../../types/languageTypes";
+// import { TextsType } from "../../types/languageTypes";
 import LineGradient from "../../components/LineGradient";
+import { useAppContext } from '../../context/AppContext';
 
 type Props = {
-    texts: TextsType,
+    // texts: TextsType,
     btnsInitPos: number,
 }
 
-const LandingText = ({ texts, btnsInitPos }: Props) => {
+const LandingText = ({ btnsInitPos }: Props) => {
+    const { state } = useAppContext();
+
     return (
         <motion.div
             initial="hidden"
@@ -40,7 +43,7 @@ const LandingText = ({ texts, btnsInitPos }: Props) => {
             </div>
 
             <p className="mt-10 mb-7 text-lg text-center md:text-start">
-                {texts.landing.welcome}
+                {state.texts.landing.welcome}
             </p>
         </motion.div>
     )

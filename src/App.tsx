@@ -3,7 +3,6 @@ import NavBar from './scenes/navbar';
 import { SelectedPage, SelectedLanguage } from "./share/types";
 import useMediaQuery from "./hooks/useMediaQuery";
 import DotGroup from "./components/DotGroup";
-// import LineGradient from "./components/LineGradient";
 import { motion } from "framer-motion"
 import Landing from "./scenes/landing/Landing";
 import LandingFlipped from "./scenes/landing/LandingFlipped";
@@ -17,28 +16,21 @@ import Contact from "./scenes/contact/Contact";
 import ContactFlipped from "./scenes/contact/ContactFlipped";
 import Footer from "./scenes/footer/Footer";
 import FooterFlipped from "./scenes/footer/FooterFlipped";
-import { TextsType } from "./types/languageTypes";
 import { importAppTexts } from "./utilities/utils";
-
-const initTexts: TextsType = {
-  landing: {
-    welcome: "Welcome",
-    contactBtn: "Let's talk",
-  }
-}
+import { useAppContext } from './context/AppContext';
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
   const [selectedLanguage, setSelectedLanguage] = useState<SelectedLanguage>(SelectedLanguage.English)
-  const [texts, setTexts] = useState<TextsType>(initTexts)
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
   const isDesktop = useMediaQuery("(min-width: 1060px")
   const [isAppFlipped, setIsAppFlipped] = useState<boolean>(false)
+  const { dispatch } = useAppContext();
 
   useEffect(() => {
     const texts = importAppTexts(selectedLanguage)
 
-    setTexts(texts)
+    dispatch({ type: 'setTexts', payload: texts })
   }, [selectedLanguage])
 
   useEffect(() => {
@@ -79,18 +71,14 @@ function App() {
           {!isAppFlipped
             ? <Landing
               setSelectedPage={setSelectedPage}
-              texts={texts}
             />
             : <LandingFlipped
               setSelectedPage={setSelectedPage}
-              texts={texts}
             />
           }
 
         </motion.div>
       </div>
-
-      {/* <LineGradient /> */}
 
       <div className="w-5/6 mx-auto md:h-full">
         <motion.div
@@ -101,8 +89,6 @@ function App() {
         </motion.div>
       </div>
 
-      {/* <LineGradient /> */}
-
       <div className="bg-gray-800 mx-auto md:h-full">
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
@@ -112,20 +98,15 @@ function App() {
         </motion.div>
       </div>
 
-      {/* <LineGradient /> */}
-
       <div className="w-5/6 mx-auto md:h-full">
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Testimonials)}
         >
-          {/* {!isAppFlipped ? <Testimonials /> : <TestimonialsFlipped />} */}
 
           {!isAppFlipped ? <Testimonials2 /> : <Testimonials2Flipped />}
 
         </motion.div>
       </div>
-
-      {/* <LineGradient /> */}
 
       <div className="bg-gray-800 mx-auto md:h-full">
         <motion.div

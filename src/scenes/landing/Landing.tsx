@@ -5,14 +5,12 @@ import LandingImg from "./LandingImg";
 import ContactMeBtns from "./ContactMeBtns";
 import SocialMediaBtns from "./SocialMediaBtns";
 import LandingText from "./LandingText";
-import { TextsType } from "../../types/languageTypes";
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void,
-    texts: TextsType
 }
 
-const Landing = ({ setSelectedPage, texts }: Props) => {
+const Landing = ({ setSelectedPage }: Props) => {
     const isAboveLarge = useMediaQuery("(min-width: 1060px)")
 
     return (
@@ -31,7 +29,7 @@ const Landing = ({ setSelectedPage, texts }: Props) => {
             <div className="basis-3/5 mt-12 md:mt-32">
 
                 {/* HEADINGS */}
-                <LandingText texts={texts} btnsInitPos={-50} />
+                <LandingText btnsInitPos={-50} />
 
                 {/* CONTACT ME*/}
                 <ContactMeBtns setSelectedPage={setSelectedPage} btnsInitPos={-50} />
