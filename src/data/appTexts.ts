@@ -31,6 +31,11 @@ export const engTexts: TextsType = {
         formPlaceholderEmail: "Your email",
         formPlaceholderMsg: "Message to send",
         semdMsgBtn: "Send message"
+    },
+    footer: {
+        madeWithText: "Made with",
+        inText: "in",
+        cityText: "Barcelona"
     }
 }
 
@@ -63,5 +68,10 @@ export const espTexts: TextsType = {
         formPlaceholderEmail: "Tu email",
         formPlaceholderMsg: "Mensaje a enviar",
         semdMsgBtn: "Enviar mensaje"
+    },
+    footer: {
+        madeWithText: "Hecho con",
+        inText: "en",
+        cityText: "Barcelona"
     }
 }

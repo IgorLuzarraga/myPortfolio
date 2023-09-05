@@ -1,9 +1,12 @@
 import PulseHeart from "./PulseHeart.tsx"
+import { useAppContext } from "../context/AppContext.tsx"
 
 const MadeWithLove = () => {
+    const { state } = useAppContext()
+
     return (
         <div className="flex justify-center gap-2 font-playfair text-xl text-white">
-            <p>Made with </p>
+            <p>{state.texts.footer.madeWithText} </p>
             <a
                 href="https://en.wikipedia.org/wiki/Barcelona"
                 target="_blank"
@@ -13,14 +16,14 @@ const MadeWithLove = () => {
             </a>
 
             <p className="flex gap-1">
-                in
+                {state.texts.footer.inText}
                 <a
                     className="hover:opacity-50 transition duration-500"
                     href="https://en.wikipedia.org/wiki/Barcelona"
                     target="_blank"
                     rel="noreferrer"
                 >
-                    Barcelona
+                    {state.texts.footer.cityText}
                 </a>
 
             </p>

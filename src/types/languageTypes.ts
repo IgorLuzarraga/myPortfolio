@@ -29,5 +29,10 @@ export type TextsType = {
         formPlaceholderEmail: string,
         formPlaceholderMsg: string,
         semdMsgBtn: string,
+    },
+    footer: {
+        madeWithText: string,
+        inText: string,
+        cityText: string,
     }
 }
