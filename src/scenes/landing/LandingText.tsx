@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import LineGradient from "../../components/LineGradient";
+// import LineGradient from "../../components/LineGradient";
 import { useAppContext } from '../../context/AppContext';
+import SimpleTextFormat from "../../components/textFormat/SimpleTextFormat";
 
 type Props = {
     btnsInitPos: number,
@@ -25,14 +26,14 @@ const LandingText = ({ btnsInitPos }: Props) => {
                     <span>Igor </span>
                     <div className="flex flex-col gap-5">
                         <span className="text-purple-500">Luzarraga</span>
-                        <LineGradient />
+                        {/* <LineGradient /> */}
                     </div>
 
                 </div>
             </div>
 
             <p className="mt-10 mb-7 text-lg text-center md:text-start">
-                {state.texts.landing.welcome}
+                <SimpleTextFormat text={state.texts.landing.welcome} />
             </p>
         </motion.div>
     )
