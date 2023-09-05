@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { SelectedPage } from '../../types/appType'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
 import Link from './Link'
-// import ModalLanguageMenu from "../../components/ModalLanguageMenu"
+import ModalLanguageMenu from "../../components/ModalLanguageMenu"
 
 type Props = {
     selectedPage: SelectedPage,
@@ -32,8 +32,6 @@ const NavSmallScreen = ({ selectedPage, setSelectedPage }: Props) => {
                         isMenuToggled={isMenuToggled}
                         setIsMenuToggled={setIsMenuToggled}
                     />
-                    {/* <ModalLanguageMenu selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} /> */}
-
                 </>
             }
             {/* MODAL MENU */}
@@ -100,6 +98,8 @@ const ModalMenu = ({ selectedPage, setSelectedPage, isMenuToggled, setIsMenuTogg
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
             />
+
+            <ModalLanguageMenu />
         </div>
     </div>
 

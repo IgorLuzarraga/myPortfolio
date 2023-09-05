@@ -56,7 +56,7 @@ const ModalMenu = ({ isMenuToggled, setIsMenuToggled }: ModalMenuProps) => {
     }
 
     return (
-        <div className={`fixed top-0 ${posHorizontal} h-1/3 z-40 opacity-70 w-[160px] 
+        <div className={`fixed top-[440px] ${posHorizontal} h-1/3 z-40 opacity-70 w-[160px] 
         bg-modal-menu-color drop-shadow-xl`}
         >
 

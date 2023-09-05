@@ -11,16 +11,12 @@ type Props = {
     isTopOfPage: boolean,
     selectedPage: SelectedPage,
     setSelectedPage: (value: SelectedPage) => void,
-    // selectedLanguage: SelectedLanguage,
-    // setSelectedLanguage: (value: SelectedLanguage) => void,
 }
 
 const NavBar = ({
     isTopOfPage,
     selectedPage,
     setSelectedPage,
-    // selectedLanguage,
-    // setSelectedLanguage,
 }: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px")
     const navbarBackground = isTopOfPage ? "" : "bg-nav-color shadow-2xl"
@@ -42,14 +38,12 @@ const NavBar = ({
                                 />
                                 <div className="flex justify-center gap-10">
                                     <BtnFlipApp />
-                                    {/* <ModalLanguageMenu selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} /> */}
                                     <ModalLanguageMenu />
                                 </div>
                             </>
                             :
                             <>
                                 <div className="flex justify-center gap-10">
-                                    {/* <ModalLanguageMenu selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} /> */}
                                     <ModalLanguageMenu />
                                     <BtnFlipApp />
                                 </div>
@@ -68,7 +62,6 @@ const NavBar = ({
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
-                        {/* <ModalLanguageMenu selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} /> */}
                     </>
                 }
 
