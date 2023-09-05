@@ -21,5 +21,13 @@ export type TextsType = {
         titlePart2: string,
         heading: string,
         testimonialArr: TestimonialsType,
+    },
+    contact: {
+        titlePart1: string,
+        titlePart2: string,
+        formPlaceholderName: string,
+        formPlaceholderEmail: string,
+        formPlaceholderMsg: string,
+        semdMsgBtn: string,
     }
 }

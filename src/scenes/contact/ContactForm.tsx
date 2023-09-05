@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
+import { useAppContext } from "../../context/AppContext";
 
 const ContactForm = () => {
+    const { state } = useAppContext()
+
     const inputStyles = `mb-5 w-full bg-form-color font-semibold placeholder-white p-3`
 
     const {
@@ -38,7 +41,7 @@ const ContactForm = () => {
                 <input
                     className={inputStyles}
                     type="text"
-                    placeholder="Your name"
+                    placeholder={state.texts.contact.formPlaceholderName}
                     {...register("name", {
                         required: true,
                         maxLength: 100,
@@ -54,7 +57,7 @@ const ContactForm = () => {
                 <input
                     className={inputStyles}
                     type="text"
-                    placeholder="Your email"
+                    placeholder={state.texts.contact.formPlaceholderEmail}
                     {...register("email", {
                         required: true,
                         pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -69,7 +72,7 @@ const ContactForm = () => {
 
                 <textarea
                     className={inputStyles}
-                    placeholder="Message to send"
+                    placeholder={state.texts.contact.formPlaceholderMsg}
                     cols={50}
                     rows={4}
                     {...register("message", {
@@ -90,10 +93,10 @@ const ContactForm = () => {
                 <div className="flex justify-center">
                     <button
                         className="p-5 bg-btn-color text-white font-semibold hover:bg-red 
-                    hover:text-purple-500 transition duration-500"
+                    hover:text-purple-500 transition duration-500 uppercase"
                         type="submit"
                     >
-                        SEND MESSAGE
+                        {state.texts.contact.semdMsgBtn}
                     </button>
                 </div>
 

@@ -23,6 +23,14 @@ export const engTexts: TextsType = {
         titlePart2: "IMONIALS",
         heading: "Colleague Testimonials: What Those Who've Worked with Me Have to Say. Explore the feedback and insights shared by individuals who've collaborated with me. Their testimonials reflect our teamwork and the impact of our contributions.",
         testimonialArr: [engTestimonial1, engTestimonial2, engTestimonial3]
+    },
+    contact: {
+        titlePart1: "LET'S",
+        titlePart2: "BEGIN",
+        formPlaceholderName: "Your name",
+        formPlaceholderEmail: "Your email",
+        formPlaceholderMsg: "Message to send",
+        semdMsgBtn: "Send message"
     }
 }
 
@@ -47,5 +55,13 @@ export const espTexts: TextsType = {
         titlePart2: "IMONIOS",
         heading: "Testimonios de Colegas: Lo Que Dicen Aquellos que Han Trabajado Conmigo. Explora los comentarios e ideas compartidos por personas que han colaborado conmigo. Sus testimonios reflejan nuestro trabajo en equipo y el impacto de nuestras contribuciones.",
         testimonialArr: [espTestimonial1, espTestimonial2, espTestimonial3]
+    },
+    contact: {
+        titlePart1: "COM",
+        titlePart2: "ENCEMOS",
+        formPlaceholderName: "Tu nombre",
+        formPlaceholderEmail: "Tu email",
+        formPlaceholderMsg: "Mensaje a enviar",
+        semdMsgBtn: "Enviar mensaje"
     }
 }

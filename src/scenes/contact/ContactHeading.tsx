@@ -1,10 +1,20 @@
 import { motion } from "framer-motion";
-import LineGradient from "../../components/LineGradient";
+import { useAppContext } from "../../context/AppContext";
+import { AppState, SelectedLanguage } from "../../types/appType";
 
 type Props = {
     headingInitPos: number,
 }
+
+const isLanguageEnglish = (state: AppState) =>
+    state.language === SelectedLanguage.English
+
+const setGapDependingOfLanguage = (state: AppState) =>
+    isLanguageEnglish(state) ? 'gap-2' : 'gap-0'
+
 const ContactHeading = ({ headingInitPos }: Props) => {
+    const { state } = useAppContext()
+
     return (
         <motion.div
             initial="hidden"
@@ -18,11 +28,16 @@ const ContactHeading = ({ headingInitPos }: Props) => {
             className="flex justify-end w-full"
         >
             <div>
-                <p className="font-playfair font-semibold text-4xl">
-                    <span>LET'S </span><span className="text-purple-500">BEGIN</span>
+                <p className={`flex ${setGapDependingOfLanguage(state)} font-playfair font-semibold text-4xl`}>
+                    <span>
+                        {state.texts.contact.titlePart1}
+                    </span>
+                    <span className="text-purple-500">
+                        {state.texts.contact.titlePart2}
+                    </span>
                 </p>
                 <div className="flex md:justify-end my-5">
-                    <LineGradient width="w-1/2" />
+                    {/* <LineGradient width="w-1/2" /> */}
                 </div>
             </div>
         </motion.div>

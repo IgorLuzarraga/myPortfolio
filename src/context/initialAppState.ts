@@ -25,6 +25,10 @@ const initTexts: TextsType = {
         titlePart2: "IMONIALS",
         heading: "These are people's testimonials",
         testimonialArr: [engTestimonial1, engTestimonial2, engTestimonial3]
+    },
+    contact: {
+        titlePart1: "LET'S",
+        titlePart2: "BEGIN",
     }
 }
 
