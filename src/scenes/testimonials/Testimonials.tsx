@@ -1,4 +1,4 @@
-import { SelectedPage } from "../../share/types";
+import { SelectedPage } from "../../types/appType";
 import { fromSelectedPageToPageId } from "../../utilities/utils";
 import TestimonialsPerson1 from "./TestimonialsPerson1";
 import TestimonialsPerson2 from "./TestimonialsPerson2";

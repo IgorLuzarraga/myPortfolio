@@ -1,14 +1,9 @@
 import { useState } from 'react'
-import { SelectedLanguage } from '../share/types'
+import { SelectedLanguage } from '../types/appType'
 import { XMarkIcon } from '@heroicons/react/20/solid'
 import { TbMessageLanguage } from 'react-icons/tb'
 import { useAppContext } from '../context/AppContext'
-
-
-type Props = {
-    selectedLanguage: SelectedLanguage,
-    setSelectedLanguage: (value: SelectedLanguage) => void,
-}
+import { importAppTexts } from "../utilities/utils";
 
 type BtnSelectLanguageProps = {
     isMenuToggled: boolean,
@@ -18,11 +13,9 @@ type BtnSelectLanguageProps = {
 type ModalMenuProps = {
     isMenuToggled: boolean,
     setIsMenuToggled: (value: boolean) => void,
-    selectedLanguage: SelectedLanguage,
-    setSelectedLanguage: (value: SelectedLanguage) => void,
 }
 
-const ModalLanguageMenu = ({ selectedLanguage, setSelectedLanguage }: Props) => {
+const ModalLanguageMenu = () => {
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
 
     return (
@@ -36,8 +29,6 @@ const ModalLanguageMenu = ({ selectedLanguage, setSelectedLanguage }: Props) => 
             {isMenuToggled && (<ModalMenu
                 isMenuToggled={isMenuToggled}
                 setIsMenuToggled={setIsMenuToggled}
-                selectedLanguage={selectedLanguage}
-                setSelectedLanguage={setSelectedLanguage}
             />
             )}
         </div>
@@ -53,9 +44,16 @@ const BtnSelectLanguage = ({ isMenuToggled, setIsMenuToggled }: BtnSelectLanguag
         <TbMessageLanguage className='w-6 h-6' />
     </button>
 
-const ModalMenu = ({ isMenuToggled, setIsMenuToggled, selectedLanguage, setSelectedLanguage }: ModalMenuProps) => {
-    const { state } = useAppContext();
+const ModalMenu = ({ isMenuToggled, setIsMenuToggled }: ModalMenuProps) => {
+    const { state, dispatch } = useAppContext();
     const posHorizontal = state.appFlipped === "notFlipped" ? 'right-0' : 'left-0'
+
+    const dispathActions = (selectedLanguage: SelectedLanguage) => {
+        dispatch({ type: 'setLanguage', payload: selectedLanguage })
+
+        const texts = importAppTexts(selectedLanguage)
+        dispatch({ type: 'setTexts', payload: texts })
+    }
 
     return (
         <div className={`fixed top-0 ${posHorizontal} h-1/3 z-40 opacity-70 w-[160px] 
@@ -72,18 +70,18 @@ const ModalMenu = ({ isMenuToggled, setIsMenuToggled, selectedLanguage, setSelec
             {/* MENU ITEMS */}
             <div className='ml-[18%] flex flex-col gap-10 text-xl text-purple-500'>
                 <div
-                    className={`${selectedLanguage === SelectedLanguage.English ? "text-white" : ""}
+                    className={`${state.language === SelectedLanguage.English ? "text-white" : ""}
               hover:text-white transition duration-500 
                 hover:cursor-pointer`}
-                    onClick={() => setSelectedLanguage(SelectedLanguage.English)}
+                    onClick={() => dispathActions(SelectedLanguage.English)}
                 >
                     English
                 </div>
                 <div
-                    className={`${selectedLanguage === SelectedLanguage.Spanish ? "text-white" : ""}
+                    className={`${state.language === SelectedLanguage.Spanish ? "text-white" : ""}
               hover:text-white transition duration-500 
                 hover:cursor-pointer`}
-                    onClick={() => setSelectedLanguage(SelectedLanguage.Spanish)}
+                    onClick={() => dispathActions(SelectedLanguage.Spanish)}
                 >
                     Spanish
                 </div>

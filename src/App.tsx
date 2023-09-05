@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import NavBar from './scenes/navbar';
-import { SelectedPage, SelectedLanguage } from "./share/types";
 import useMediaQuery from "./hooks/useMediaQuery";
 import DotGroup from "./components/DotGroup";
 import { motion } from "framer-motion"
@@ -18,23 +17,22 @@ import Footer from "./scenes/footer/Footer";
 import FooterFlipped from "./scenes/footer/FooterFlipped";
 import { importAppTexts } from "./utilities/utils";
 import { useAppContext } from './context/AppContext';
-import { AppState } from "./types/appType";
+import { AppState, SelectedPage } from "./types/appType";
 
 const isAppFlipped = (state: AppState) =>
   state.appFlipped === "notFlipped"
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
-  const [selectedLanguage, setSelectedLanguage] = useState<SelectedLanguage>(SelectedLanguage.English)
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
   const isDesktop = useMediaQuery("(min-width: 1060px")
   const { state, dispatch } = useAppContext();
 
   useEffect(() => {
-    const texts = importAppTexts(selectedLanguage)
+    const texts = importAppTexts(state.language)
 
     dispatch({ type: 'setTexts', payload: texts })
-  }, [selectedLanguage])
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,8 +53,6 @@ function App() {
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
-        selectedLanguage={selectedLanguage}
-        setSelectedLanguage={setSelectedLanguage}
       />
 
       {isDesktop && (

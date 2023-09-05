@@ -1,5 +1,5 @@
 import { testimonials } from "../../data/testimonialsData";
-import { SelectedPage } from "../../share/types";
+import { SelectedPage } from "../../types/appType";
 import { fromSelectedPageToPageId } from "../../utilities/utils";
 import TestimonialsHeadings from "./TestimonialsHeadings";
 import Testimonial from "./Testimonial";

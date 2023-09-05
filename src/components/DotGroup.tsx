@@ -1,5 +1,5 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { SelectedPage } from "../share/types";
+import { SelectedPage } from "../types/appType";
 import { fromSelectedPageToPageHref } from "../utilities/utils";
 import { motion } from "framer-motion";
 

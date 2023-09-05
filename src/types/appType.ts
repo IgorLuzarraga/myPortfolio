@@ -8,13 +8,27 @@ import { TextsType } from '../types/languageTypes'
 //     status: "flipped";
 // };
 export type AppState = {
-    texts: TextsType;
-    appFlipped: AppFlipType;
+    language: SelectedLanguage,
+    texts: TextsType,
+    appFlipped: AppFlipType,
 }
 
 type AppNotFlipped = "notFlipped";
 type AppFlipped = "flipped";
 
 export type AppFlipType = AppNotFlipped | AppFlipped;
+
+export enum SelectedPage {
+    Home = "home",
+    Skills = "skills",
+    Projects = "projects",
+    Testimonials = "testimonials",
+    Contact = "contact"
+}
+
+export enum SelectedLanguage {
+    English = "english",
+    Spanish = "spanish",
+}
 
 

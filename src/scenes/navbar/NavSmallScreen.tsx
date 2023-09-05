@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { SelectedPage } from '../../share/types'
+import { SelectedPage } from '../../types/appType'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
 import Link from './Link'
+// import ModalLanguageMenu from "../../components/ModalLanguageMenu"
 
 type Props = {
     selectedPage: SelectedPage,
@@ -25,10 +26,15 @@ const NavSmallScreen = ({ selectedPage, setSelectedPage }: Props) => {
 
     return (
         <div className='flex items-center justify-between'>
-            {!isMenuToggled && <Btn3Bars
-                isMenuToggled={isMenuToggled}
-                setIsMenuToggled={setIsMenuToggled}
-            />
+            {!isMenuToggled &&
+                <>
+                    <Btn3Bars
+                        isMenuToggled={isMenuToggled}
+                        setIsMenuToggled={setIsMenuToggled}
+                    />
+                    {/* <ModalLanguageMenu selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} /> */}
+
+                </>
             }
             {/* MODAL MENU */}
             {isMenuToggled && (<ModalMenu

@@ -1,4 +1,4 @@
-import { SelectedPage, SelectedLanguage } from "../share/types"
+import { SelectedPage, SelectedLanguage } from '../types/appType'
 import { pipe } from 'fp-ts/lib/function'
 import { engTexts, espTexts } from '../data/appTexts'
 

@@ -1,5 +1,5 @@
 import Link from './Link'
-import { SelectedPage } from '../../share/types'
+import { SelectedPage } from '../../types/appType'
 
 type Props = {
     selectedPage: SelectedPage,

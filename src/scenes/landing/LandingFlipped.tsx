@@ -1,5 +1,5 @@
 import useMediaQuery from "../../hooks/useMediaQuery";
-import { SelectedPage } from "../../share/types";
+import { SelectedPage } from "../../types/appType";
 import { fromSelectedPageToPageId } from "../../utilities/utils";
 import ContactMeBtns from "./ContactMeBtns";
 import SocialMediaBtns from "./SocialMediaBtns";

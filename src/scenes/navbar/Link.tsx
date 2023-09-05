@@ -1,4 +1,4 @@
-import { SelectedPage } from "../../share/types";
+import { SelectedPage } from "../../types/appType";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { fromSelectedPageToPageName } from "../../utilities/utils";
 

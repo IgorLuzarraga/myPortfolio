@@ -1,4 +1,4 @@
-import { SelectedPage } from "../../share/types";
+import { SelectedPage } from "../../types/appType";
 import { fromSelectedPageToPageId } from "../../utilities/utils";
 import ContactForm from "./ContactForm";
 import ContactHeading from "./ContactHeading";
