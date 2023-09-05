@@ -20,7 +20,7 @@ import { useAppContext } from './context/AppContext';
 import { AppState, SelectedPage } from "./types/appType";
 
 const isAppFlipped = (state: AppState) =>
-  state.appFlipped === "notFlipped"
+  state.appFlipped === "flipped"
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -81,7 +81,7 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Skills)}
         >
-          {!isAppFlipped(state) ? <MySkills /> : <MySkillsFlipped />}
+          {isAppFlipped(state) ? <MySkillsFlipped /> : <MySkills />}
 
         </motion.div>
       </div>
@@ -90,7 +90,7 @@ function App() {
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
         >
-          {!isAppFlipped(state) ? <Projects /> : <ProjectsFlipped />}
+          {isAppFlipped(state) ? <ProjectsFlipped /> : <Projects />}
 
         </motion.div>
       </div>
@@ -100,7 +100,7 @@ function App() {
           onViewportEnter={() => setSelectedPage(SelectedPage.Testimonials)}
         >
 
-          {!isAppFlipped(state) ? <Testimonials2 /> : <Testimonials2Flipped />}
+          {isAppFlipped(state) ? <Testimonials2Flipped /> : <Testimonials2 />}
 
         </motion.div>
       </div>
@@ -110,12 +110,12 @@ function App() {
           onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
         >
 
-          {!isAppFlipped(state) ? <Contact /> : <ContactFlipped />}
+          {isAppFlipped(state) ? <ContactFlipped /> : <Contact />}
 
         </motion.div>
       </div>
 
-      {!isAppFlipped(state) ? <Footer /> : <FooterFlipped />}
+      {isAppFlipped(state) ? <FooterFlipped /> : <Footer />}
 
     </div>
   );
