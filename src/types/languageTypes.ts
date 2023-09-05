@@ -1,3 +1,5 @@
+import { TestimonialsType } from "./testimonialsTypes";
+
 export type TextsType = {
     landing: {
         welcome: string;
@@ -13,5 +15,11 @@ export type TextsType = {
         skill2Desc: string,
         skill3Title: string,
         skill3Desc: string,
+    },
+    testimonials: {
+        titlePart1: string,
+        titlePart2: string,
+        heading: string,
+        testimonialArr: TestimonialsType,
     }
 }

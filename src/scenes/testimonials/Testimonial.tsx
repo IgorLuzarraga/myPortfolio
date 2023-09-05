@@ -5,7 +5,7 @@ import { TestimonialType2 } from "../../types/testimonialsTypes";
 
 const Testimonial = ({
     index,
-    testimonial,
+    testimonialDesc,
     name,
     designation,
     company,
@@ -27,7 +27,7 @@ const Testimonial = ({
         <p className="font-playfair text-6xl">“</p>
 
         <div className='mt-1'>
-            <p className='text-white tracking-wider text-[18px]'>{testimonial}</p>
+            <p className='text-white tracking-wider text-[18px]'>{testimonialDesc}</p>
 
             <div className='mt-7 flex justify-between items-center gap-1'>
                 <div className='flex-1 flex flex-col'>

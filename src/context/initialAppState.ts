@@ -1,5 +1,6 @@
 import { AppState, SelectedLanguage, AppFlipType } from '../types/appType';
 import { TextsType } from '../types/languageTypes'
+import { engTestimonial1, engTestimonial2, engTestimonial3 } from '../data/testimonialsData';
 
 const initAppFlippedState: AppFlipType = "notFlipped"
 
@@ -18,6 +19,12 @@ const initTexts: TextsType = {
         skill2Desc: "string",
         skill3Title: "string",
         skill3Desc: "string",
+    },
+    testimonials: {
+        titlePart1: "TEST",
+        titlePart2: "IMONIALS",
+        heading: "These are people's testimonials",
+        testimonialArr: [engTestimonial1, engTestimonial2, engTestimonial3]
     }
 }
 

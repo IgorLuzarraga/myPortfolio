@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import LineGradient from "../../components/LineGradient"
+// import LineGradient from "../../components/LineGradient"
 import { useAppContext } from '../../context/AppContext';
 import SimpleTextFormat from "../../components/textFormat/SimpleTextFormat";
 import TitleFormat from "../../components/textFormat/TitleFormat";
@@ -24,7 +24,7 @@ const MySkillsText = () => {
                 titlePart2={state.texts.mySkills.titlePart2}
             />
 
-            <LineGradient width="w-1/3" />
+            {/* <LineGradient width="w-1/3" /> */}
 
             <p className="mt-10 mb-7">
                 <SimpleTextFormat text={state.texts.mySkills.heading} />

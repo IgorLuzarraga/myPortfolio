@@ -55,3 +55,9 @@ export const getTextFirstLine = (text: string) =>
 
 export const getTextExceptFirstLine = (text: string) =>
     text.substring(text.indexOf('.') + 1)
+
+// ------------------------------------------
+
+export const reverseArray = <T>(arr: T[]): T[] => {
+    return [...arr].reverse();
+};

@@ -1,5 +1,5 @@
 export type TestimonialType = {
-    testimonial: string;
+    testimonialDesc: string;
     name: string;
     designation: string;
     company: string;
@@ -12,7 +12,7 @@ export type TestimonialsType = TestimonialType[]
 
 export type TestimonialType2 = {
     index: number,
-    testimonial: string;
+    testimonialDesc: string;
     name: string;
     designation: string;
     company: string;
