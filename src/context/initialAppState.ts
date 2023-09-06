@@ -5,6 +5,13 @@ import { engTestimonial1, engTestimonial2, engTestimonial3 } from '../data/testi
 const initAppFlippedState: AppFlipType = "notFlipped"
 
 const initTexts: TextsType = {
+    navbarMenu: {
+        home: "Home",
+        skills: "Skills",
+        projects: "Projects",
+        testimonials: "Testimonials",
+        contact: "Contact"
+    },
     landing: {
         welcome: "Welcome",
         contactBtn: "Let's talk",
@@ -29,6 +36,15 @@ const initTexts: TextsType = {
     contact: {
         titlePart1: "LET'S",
         titlePart2: "BEGIN",
+        formPlaceholderName: "Your name",
+        formPlaceholderEmail: "Your email",
+        formPlaceholderMsg: "Message to send",
+        semdMsgBtn: "Send message"
+    },
+    footer: {
+        madeWithText: "Made with",
+        inText: "in",
+        cityText: "Barcelona"
     }
 }
 

@@ -3,6 +3,13 @@ import { engTestimonial1, engTestimonial2, engTestimonial3 } from "./testimonial
 import { espTestimonial1, espTestimonial2, espTestimonial3 } from "./testimonialsData"
 
 export const engTexts: TextsType = {
+    navbarMenu: {
+        home: "Home",
+        skills: "Skills",
+        projects: "Projects",
+        testimonials: "Testimonials",
+        contact: "Contact"
+    },
     landing: {
         welcome: "Welcome to my project portfolio! Below, you'll find a curated selection of projects that highlight my skills, experience, and passion for solving real-world problems with technology. Each project is briefly described and includes links to code repositories and live demos. Feel free to explore and see how I approach different challenges.",
         contactBtn: "Let's talk"
@@ -40,6 +47,13 @@ export const engTexts: TextsType = {
 }
 
 export const espTexts: TextsType = {
+    navbarMenu: {
+        home: "Inicio",
+        skills: "Habilidades",
+        projects: "Proyectos",
+        testimonials: "Testimonios",
+        contact: "Contacto"
+    },
     landing: {
         welcome: "¡Bienvenido a mi portafolio de proyectos! A continuación, encontrarás una selección cuidadosamente escogida de proyectos que resaltan mis habilidades, experiencia y pasión por resolver problemas del mundo real con tecnología. Cada proyecto se describe brevemente e incluye enlaces a repositorios de código y demostraciones en vivo. Siéntete libre de explorar y ver cómo abordo diferentes desafíos.",
         contactBtn: "Hablemos"

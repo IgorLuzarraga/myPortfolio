@@ -21,7 +21,7 @@ const LandingText = ({ btnsInitPos }: Props) => {
                 visible: { opacity: 1, x: 0 },
             }}
         >
-            <div className="flex justify-center md:justify-normal gap-[15px] text-6xl font-playfair z-10">
+            <div className="flex justify-center md:justify-normal gap-[15px] text-5xl md:text-6xl font-playfair z-10">
                 <div className="flex gap-1 text-center md:text-start">
                     <span>Igor </span>
                     <div className="flex flex-col gap-5">

@@ -1,6 +1,13 @@
 import { TestimonialsType } from "./testimonialsTypes";
 
 export type TextsType = {
+    navbarMenu: {
+        home: string,
+        skills: string,
+        projects: string,
+        testimonials: string,
+        contact: string
+    },
     landing: {
         welcome: string;
         contactBtn: string;

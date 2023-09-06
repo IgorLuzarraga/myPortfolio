@@ -17,7 +17,7 @@ const Landing = ({ setSelectedPage }: Props) => {
         <section
             id={fromSelectedPageToPageId(SelectedPage.Home)}
             className="md:flex mx-auto w-5/6 justify-between items-center gap-16 md:h-full 
-            py-32"
+            pt-14 pb-32"
         >
             {/* IMAGE AND SOCIAL BTNS*/}
             <div className="basis-2/5 flex flex-col justify-center items-center gap-2">
