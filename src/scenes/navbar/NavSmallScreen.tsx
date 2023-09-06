@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { SelectedPage } from '../../types/appType'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid'
-import Link from './Link'
+import Link from '../../components/Link'
 import ModalLanguageMenu from "../../components/ModalLanguageMenu"
 
 type Props = {

@@ -1,4 +1,4 @@
-import Link from './Link'
+import ShowPagesLinks from '../../components/ShowPagesLinks'
 import { SelectedPage } from '../../types/appType'
 
 type Props = {
@@ -8,36 +8,7 @@ type Props = {
 
 const NavAvobeMediumScreen = ({ selectedPage, setSelectedPage }: Props) =>
     <div className="flex gap-16 font-opensans text-lg text-purple-300 font-semibold">
-        <Link
-            //page="Home"
-            page={SelectedPage.Home}
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-        />
-        <Link
-            //page="Skills"
-            page={SelectedPage.Skills}
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-        />
-        <Link
-            //page="Our Projects"
-            page={SelectedPage.Projects}
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-        />
-        <Link
-            //page="Our Testimonials"
-            page={SelectedPage.Testimonials}
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-        />
-        <Link
-            //page="Contact Us"
-            page={SelectedPage.Contact}
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-        />
+        <ShowPagesLinks selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
     </div>
 
 export default NavAvobeMediumScreen
