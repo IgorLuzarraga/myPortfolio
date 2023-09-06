@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
-import LineGradient from "../../components/LineGradient";
-
+import { useAppContext } from "../../context/AppContext";
+// import LineGradient from "../../components/LineGradient";
 
 const ProjectsHeadings = () => {
+    const { state } = useAppContext()
+
     return (
         <motion.div
-            className="md:w-2/5 mx-auto text-center"
+            className="md:w-3/5 mx-auto text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.5 }}
@@ -17,16 +19,15 @@ const ProjectsHeadings = () => {
         >
             <div>
                 <p className="font-playfair font-semibold text-4xl">
-                    <span>PRO</span><span className="text-purple-500">JECTS</span>
+                    <span>{state.texts.projects.titlePart1}</span>
+                    <span className="text-purple-500">{state.texts.projects.titlePart2}</span>
                 </p>
                 <div className="flex justify-center mt-5">
-                    <LineGradient width="w-2/3" />
+                    {/* <LineGradient width="w-2/3" /> */}
                 </div>
             </div>
-            <p className="mt-10 mb-10">
-                Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-                fames odio in at. At magna ornare dictum lectus. Purus massa morbi
-                purus nec eget eleifend ut elit.
+            <p className="mt-5 mb-16">
+                {state.texts.projects.heading}
             </p>
         </motion.div>
     )

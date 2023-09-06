@@ -11,7 +11,7 @@ export const engTexts: TextsType = {
         contact: "Contact"
     },
     landing: {
-        welcome: "Welcome to my project portfolio! Below, you'll find a curated selection of projects that highlight my skills, experience, and passion for solving real-world problems with technology. Each project is briefly described and includes links to code repositories and live demos. Feel free to explore and see how I approach different challenges.",
+        welcome: "Welcome to my project portfolio! Explore my portfolio of front-end and full-stack projects. Each piece showcases my creative design and technical skills. From captivating user interfaces to robust back-end systems, my work reflects a passion for innovation. Click on any project to learn more about the technologies and challenges involved. Let's connect and discuss how we can collaborate!",
         contactBtn: "Let's talk"
     },
     mySkills: {
@@ -24,6 +24,11 @@ export const engTexts: TextsType = {
         skill2Desc: "I have solid skills in database management, including both SQL and NoSQL databases. I can design efficient database structures, optimize queries, and ensure data security. My expertise in handling data allows applications to store, retrieve, and manipulate information effectively, contributing to the overall performance and reliability of web projects.",
         skill3Title: "Version Control and Collaboration",
         skill3Desc: "Collaboration and teamwork are crucial aspects of my work. I am well-versed in version control systems like Git and platforms like GitHub, which enable seamless collaboration with team members. These tools help me track changes, resolve conflicts, and maintain code quality. My proficiency in version control fosters effective communication and efficient project workflows, making me a valuable contributor to collaborative development efforts.",
+    },
+    projects: {
+        titlePart1: "PRO",
+        titlePart2: "JECTS",
+        heading: "Below, you'll find a curated selection of projects that highlight my skills, experience, and passion for solving real-world problems with technology. Each project is briefly described and includes links to code repositories and live demos. Feel free to explore and see how I approach different challenges.",
     },
     testimonials: {
         titlePart1: "TEST",
@@ -55,7 +60,7 @@ export const espTexts: TextsType = {
         contact: "Contacto"
     },
     landing: {
-        welcome: "¡Bienvenido a mi portafolio de proyectos! A continuación, encontrarás una selección cuidadosamente escogida de proyectos que resaltan mis habilidades, experiencia y pasión por resolver problemas del mundo real con tecnología. Cada proyecto se describe brevemente e incluye enlaces a repositorios de código y demostraciones en vivo. Siéntete libre de explorar y ver cómo abordo diferentes desafíos.",
+        welcome: "¡Bienvenido a mi portafolio de proyectos! Explora mi portafolio de front-end y full-stack. Cada pieza muestra mi habilidad creativa en diseño y mis habilidades técnicas. Desde interfaces de usuario cautivadoras hasta sistemas sólidos en el back-end, mi trabajo refleja una pasión por la innovación. Haz clic en cualquier proyecto para conocer más sobre las tecnologías y desafíos involucrados. ¡Conectemos y hablemos sobre cómo podemos colaborar!",
         contactBtn: "Hablemos"
     },
     mySkills: {
@@ -68,6 +73,11 @@ export const espTexts: TextsType = {
         skill2Desc: "Tengo sólidas habilidades en la gestión de bases de datos, incluyendo bases de datos SQL y NoSQL. Puedo diseñar estructuras de bases de datos eficientes, optimizar consultas y garantizar la seguridad de los datos. Mi experiencia en el manejo de datos permite que las aplicaciones almacenen, recuperen y manipulen información de manera efectiva, contribuyendo al rendimiento y la confiabilidad general de proyectos web.",
         skill3Title: "Control de Versiones y Colaboración",
         skill3Desc: "La colaboración y el trabajo en equipo son aspectos cruciales de mi trabajo. Estoy familiarizado con sistemas de control de versiones como Git y plataformas como GitHub, que permiten una colaboración sin problemas con otros miembros del equipo. Estas herramientas me ayudan a hacer seguimiento de cambios, resolver conflictos y mantener la calidad del código. Mi competencia en el control de versiones fomenta la comunicación efectiva y flujos de trabajo eficientes en proyectos de desarrollo colaborativo, convirtiéndome en un valioso colaborador en desarrollos en equipo.",
+    },
+    projects: {
+        titlePart1: "PRO",
+        titlePart2: "YECTOS",
+        heading: "A continuación, encontrarás una selección cuidadosamente escogida de proyectos que resaltan mis habilidades, experiencia y pasión por resolver problemas del mundo real con tecnología. Cada proyecto se describe brevemente e incluye enlaces a repositorios de código y demostraciones en vivo. Siéntete libre de explorar y ver cómo abordo diferentes desafíos.",
     },
     testimonials: {
         titlePart1: "TEST",

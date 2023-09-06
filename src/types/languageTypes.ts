@@ -23,6 +23,11 @@ export type TextsType = {
         skill3Title: string,
         skill3Desc: string,
     },
+    projects: {
+        titlePart1: string,
+        titlePart2: string,
+        heading: string,
+    },
     testimonials: {
         titlePart1: string,
         titlePart2: string,

@@ -27,6 +27,11 @@ const initTexts: TextsType = {
         skill3Title: "string",
         skill3Desc: "string",
     },
+    projects: {
+        titlePart1: "PRO",
+        titlePart2: "JECTS",
+        heading: "Some of my projects",
+    },
     testimonials: {
         titlePart1: "TEST",
         titlePart2: "IMONIALS",
