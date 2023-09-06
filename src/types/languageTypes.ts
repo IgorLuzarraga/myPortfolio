@@ -1,4 +1,5 @@
 import { TestimonialsType } from "./testimonialsTypes";
+import { ProjectsType } from './projectsTypes'
 
 export type TextsType = {
     navbarMenu: {
@@ -27,6 +28,7 @@ export type TextsType = {
         titlePart1: string,
         titlePart2: string,
         heading: string,
+        projectsArr: ProjectsType,
     },
     testimonials: {
         titlePart1: string,

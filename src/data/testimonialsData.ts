@@ -65,3 +65,4 @@ export const espTestimonial3: TestimonialType = {
     github: "https://github.com/jonathanrodvaz",
     linkedin: "https://www.linkedin.com/in/jonathan-rodriguezvazquez/"
 }
+

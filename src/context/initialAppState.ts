@@ -1,6 +1,7 @@
 import { AppState, SelectedLanguage, AppFlipType } from '../types/appType';
 import { TextsType } from '../types/languageTypes'
 import { engTestimonial1, engTestimonial2, engTestimonial3 } from '../data/testimonialsData';
+import { engProject1, engProject2, engProject3, engProject4, engProject5, engProject6 } from "../data/projectsData"
 
 const initAppFlippedState: AppFlipType = "notFlipped"
 
@@ -30,7 +31,8 @@ const initTexts: TextsType = {
     projects: {
         titlePart1: "PRO",
         titlePart2: "JECTS",
-        heading: "Some of my projects",
+        heading: "Below, you'll find a curated selection of projects that highlight my skills, experience, and passion for solving real-world problems with technology. Each project is briefly described and includes links to code repositories and live demos. Feel free to explore and see how I approach different challenges.",
+        projectsArr: [engProject1, engProject2, engProject3, engProject4, engProject5, engProject6]
     },
     testimonials: {
         titlePart1: "TEST",

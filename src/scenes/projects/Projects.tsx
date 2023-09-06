@@ -5,8 +5,8 @@ import { fromSelectedPageToPageId } from "../../utilities/utils";
 import ProjectsHeadings from "./ProjectsHeadings";
 // import ProjectAdvertisement_1 from "./ProjectAdvertisement_1";
 // import ProjectAdvertisement_2 from "./ProjectAdvertisement_2";
-import { projectsData } from "../../data/projectsData";
 import { ProjectsType } from "../../types/projectsTypes";
+import { useAppContext } from "../../context/AppContext";
 
 const container = {
     hidden: {},
@@ -18,6 +18,8 @@ const container = {
 };
 
 const Projects = () => {
+    const { state } = useAppContext()
+
     return (
         <section id={fromSelectedPageToPageId(SelectedPage.Projects)}
             className="mx-auto w-5/6 py-32">
@@ -37,7 +39,7 @@ const Projects = () => {
 
                     {/* <ProjectAdvertisement_1 /> */}
 
-                    {showProjects(projectsData)}
+                    {showProjects(state.texts.projects.projectsArr)}
 
                     {/* <ProjectAdvertisement_2 /> */}
 

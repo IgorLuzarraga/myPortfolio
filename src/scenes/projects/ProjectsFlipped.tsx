@@ -5,8 +5,9 @@ import ProjectsHeadings from "./ProjectsHeadings";
 // import ProjectAdvertisement1 from "./ProjectAdvertisement_1";
 // import ProjectAdvertisement2 from "./ProjectAdvertisement_2";
 import ProjectFlipped from "./ProjectFlipped";
-import { projectsDataFlipped } from "../../data/projectsData";
 import { ProjectsType } from "../../types/projectsTypes";
+import { useAppContext } from '../../context/AppContext';
+import { reverseArray } from "../../utilities/utils";
 
 const container = {
     hidden: {},
@@ -18,6 +19,8 @@ const container = {
 };
 
 const ProjectsFlipped = () => {
+    const { state } = useAppContext();
+
     return (
         <section id={fromSelectedPageToPageId(SelectedPage.Projects)}
             className="mx-auto w-5/6 py-32">
@@ -38,7 +41,7 @@ const ProjectsFlipped = () => {
                     {/* <ProjectAdvertisement1 /> */}
 
 
-                    {showProjects(projectsDataFlipped)}
+                    {showProjects(state.texts.projects.projectsArr)}
 
                     {/* <ProjectAdvertisement2 /> */}
 
@@ -49,8 +52,10 @@ const ProjectsFlipped = () => {
     );
 };
 
-const showProjects = (projectsData: ProjectsType) =>
-    projectsData.map((project, index) =>
+const showProjects = (projectsData: ProjectsType) => {
+    const projectsDatasReverse = reverseArray(projectsData)
+
+    return projectsDatasReverse.map((project, index) =>
         <ProjectFlipped
             key={`${project.title}-${index}`}
             title={project.title}
@@ -60,5 +65,6 @@ const showProjects = (projectsData: ProjectsType) =>
             image={project.image}
         />
     )
+}
 
 export default ProjectsFlipped
