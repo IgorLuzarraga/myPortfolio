@@ -4,7 +4,7 @@ import TestimonialsHeadings from "./TestimonialsHeadings";
 import Testimonial from "./Testimonial";
 import { useAppContext } from '../../context/AppContext';
 import { TestimonialsType } from "../../types/testimonialsTypes";
-import { reverseArray } from "../../utilities/utils";
+import { reverseArrInChunksOf3 } from "../../utilities/utilsArr";
 
 const Testimonials2Flipped = () => {
     const { state } = useAppContext();
@@ -23,7 +23,7 @@ const Testimonials2Flipped = () => {
 };
 
 const showTestimonials = (testimonials: TestimonialsType) => {
-    const testimonialsReverse = reverseArray(testimonials)
+    const testimonialsReverse = reverseArrInChunksOf3(testimonials)
     return testimonialsReverse.map((testimonial, index) =>
         <Testimonial key={testimonial.name} index={index} {...testimonial} />
     )
