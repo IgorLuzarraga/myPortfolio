@@ -14,7 +14,7 @@ const ContactMeBtns = ({ btnsInitPos, setSelectedPage }: Props) => {
 
     return (
         <motion.div
-            className="flex mt-5 justify-center md:justify-start"
+            className="flex mt-6 md:mt-10 justify-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.5 }}

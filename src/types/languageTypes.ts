@@ -11,6 +11,8 @@ export type TextsType = {
     },
     landing: {
         welcome: string;
+        heading: string;
+        connectText: string;
         contactBtn: string;
     },
     mySkills: {

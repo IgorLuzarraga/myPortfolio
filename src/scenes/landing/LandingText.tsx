@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 // import LineGradient from "../../components/LineGradient";
 import { useAppContext } from '../../context/AppContext';
-import SimpleTextFormat from "../../components/textFormat/SimpleTextFormat";
+import SimpleTextFormatMultiLine from "../../components/textFormat/SimpleTextFormatMultiLine";
+import SimpleTextFormatSingleLine from "../../components/textFormat/SimpleTextFormatSingleLine";
 
 type Props = {
     btnsInitPos: number,
@@ -32,8 +33,10 @@ const LandingText = ({ btnsInitPos }: Props) => {
                 </div>
             </div>
 
-            <p className="mt-10 mb-7 text-lg text-center md:text-start">
-                <SimpleTextFormat text={state.texts.landing.welcome} />
+            <p className=" flex flex-col gap-14 mt-10 mb-7 text-center md:text-start">
+                <SimpleTextFormatMultiLine text={state.texts.landing.welcome} />
+                <SimpleTextFormatMultiLine text={state.texts.landing.heading} />
+                <SimpleTextFormatSingleLine text={state.texts.landing.connectText} />
             </p>
         </motion.div>
     )

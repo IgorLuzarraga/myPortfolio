@@ -4,17 +4,17 @@ type Props = {
     text: string
 }
 
-const SimpleTextFormat = ({ text }: Props) => {
+const SimpleTextFormatMultiLine = ({ text }: Props) => {
     return (
-        <>
+        <div className="text-lg md:text-xl">
             <span className="ml-6">
                 {getTextFirstLine(text)}
             </span>
             <span>
                 {getTextExceptFirstLine(text)}
             </span>
-        </>
+        </div>
     )
 }
 
-export default SimpleTextFormat
+export default SimpleTextFormatMultiLine

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useAppContext } from '../../context/AppContext';
-import SimpleTextFormat from "../../components/textFormat/SimpleTextFormat";
+import SimpleTextFormat from "../../components/textFormat/SimpleTextFormatMultiLine";
 
 const MySkillsImaginative = () => {
     const { state } = useAppContext();

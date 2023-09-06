@@ -61,7 +61,7 @@ function App() {
           : <DotGroup selectedPage={selectedPage} setSelectedPage={setSelectedPage} position="left-7" />
       )}
 
-      <div className="bg-gray-800 mx-auto md:h-full mb-[0px]">
+      <div className="bg-gray-800 mx-auto md:h-full pb-28 mb-[0px]">
         <motion.div
           onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >

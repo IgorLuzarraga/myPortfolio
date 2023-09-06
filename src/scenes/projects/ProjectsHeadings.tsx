@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useAppContext } from "../../context/AppContext";
+import SimpleTextFormat from "../../components/textFormat/SimpleTextFormatMultiLine";
 // import LineGradient from "../../components/LineGradient";
 
 const ProjectsHeadings = () => {
@@ -27,7 +28,7 @@ const ProjectsHeadings = () => {
                 </div>
             </div>
             <p className="mt-5 mb-16">
-                {state.texts.projects.heading}
+                <SimpleTextFormat text={state.texts.projects.heading} />
             </p>
         </motion.div>
     )

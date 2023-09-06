@@ -15,7 +15,9 @@ const initTexts: TextsType = {
     },
     landing: {
         welcome: "Welcome",
-        contactBtn: "Let's talk",
+        heading: "Behind every project lies a story of challenges overcome and new technologies mastered. Click on any project to dive deeper, discover the technologies used, and the creative problem-solving that went into it.",
+        connectText: "Let's connect and discuss how we can collaborate!",
+        contactBtn: "Let's talk"
     },
     mySkills: {
         titlePart1: "SK",
