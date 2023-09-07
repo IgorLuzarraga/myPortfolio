@@ -24,13 +24,13 @@ export const engTestimonial2: TestimonialType = {
 
 export const engTestimonial3: TestimonialType = {
     testimonialDesc:
-        "Igor's care for his clients' success sets him apart. He goes the extra mile to ensure our goals are met.",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "person-1.jpeg",
-    github: "https://github.com/jonathanrodvaz",
-    linkedin: "https://www.linkedin.com/in/jonathan-rodriguezvazquez/"
+        "Igor, my student at Neoland's Bootcamp, comes highly recommended. With a solid background in multiple programming languages and a strong commitment to self-improvement, he excels in problem-solving. Igor is both a team player and a leader, effectively managing tasks under pressure. His valuable skills, serenity, and experience make him a standout developer with a bright professional future.",
+    name: "Pedro Lérida",
+    designation: "Code Teacher, Full Stack Developer",
+    company: "Neoland",
+    image: "pedro.jpg",
+    github: "https://github.com/pedroleni",
+    linkedin: "https://www.linkedin.com/in/pedro-l%C3%A9rida-nieto/?originalSubdomain=es"
 }
 
 export const espTestimonial1: TestimonialType = {
@@ -58,12 +58,12 @@ export const espTestimonial2: TestimonialType = {
 export const espTestimonial3: TestimonialType = {
     testimonialDesc:
         "El cuidado de Igor por el éxito de sus clientes lo distingue. Se esfuerza al máximo para garantizar que se cumplan nuestros objetivos.",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "person-1.jpeg",
-    github: "https://github.com/jonathanrodvaz",
-    linkedin: "https://www.linkedin.com/in/jonathan-rodriguezvazquez/"
+    name: "Pedro Lérida",
+    designation: "Code Teacher, Full Stack Developer",
+    company: "Neoland",
+    image: "pedro.jpg",
+    github: "https://github.com/pedroleni",
+    linkedin: "https://www.linkedin.com/in/pedro-l%C3%A9rida-nieto/?originalSubdomain=es"
 }
 
 export const catTestimonial1: TestimonialType = {
@@ -91,11 +91,11 @@ export const catTestimonial2: TestimonialType = {
 export const catTestimonial3: TestimonialType = {
     testimonialDesc:
         "La cura d'Igor pel èxit dels seus clients el distingeix. Esforça's al màxim per garantir que es compleixin els nostres objectius.",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "person-1.jpeg",
-    github: "https://github.com/jonathanrodvaz",
-    linkedin: "https://www.linkedin.com/in/jonathan-rodriguezvazquez/"
+    name: "Pedro Lérida",
+    designation: "Code Teacher, Full Stack Developer",
+    company: "Neoland",
+    image: "pedro.jpg",
+    github: "https://github.com/pedroleni",
+    linkedin: "https://www.linkedin.com/in/pedro-l%C3%A9rida-nieto/?originalSubdomain=es"
 }
 

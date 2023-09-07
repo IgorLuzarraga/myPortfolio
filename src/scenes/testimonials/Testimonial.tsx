@@ -35,16 +35,16 @@ const Testimonial = ({
                     <p className='text-white font-medium text-[16px]'>
                         <span className='blue-text-gradient'>@</span> {name}
                     </p>
-                    <p className='flex gap-4 mt-1 text-lg'>
+                    <div className='flex flex-col gap-3 mt-1 text-lg'>
                         <span>{designation}</span>
                         <span> {company}</span>
-                    </p>
+                    </div>
                 </div>
 
                 <img
                     src={`../assets/people/${image}`}
                     alt={`feedback_by-${name}`}
-                    className='w-20 h-20 rounded-full object-cover'
+                    className='w-28 h-28 rounded-full object-cover'
                 />
             </div>
             <div className="mt-7 flex justify-center items-center gap-5">
