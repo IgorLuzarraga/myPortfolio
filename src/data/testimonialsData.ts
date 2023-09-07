@@ -8,7 +8,7 @@ export const engTestimonial1: TestimonialType = {
     company: "Freelance",
     image: "carlos.png",
     github: "https://github.com/Cmrdevelopment",
-    linkedin: "https://www.linkedin.com/in/cmrbolsa-0b139344/",
+    linkedin: "https://www.linkedin.com/in/carlos-mart%C3%ADn-rodriguez-b5267a272/"
 }
 
 export const engTestimonial2: TestimonialType = {
@@ -41,7 +41,7 @@ export const espTestimonial1: TestimonialType = {
     company: "Freelance",
     image: "carlos.png",
     github: "https://github.com/Cmrdevelopment",
-    linkedin: "https://www.linkedin.com/in/cmrbolsa-0b139344/",
+    linkedin: "https://www.linkedin.com/in/carlos-mart%C3%ADn-rodriguez-b5267a272/",
 }
 
 export const espTestimonial2: TestimonialType = {
