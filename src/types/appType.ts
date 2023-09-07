@@ -7,6 +7,7 @@ import { TextsType } from '../types/languageTypes'
 // type AppFlipped = {
 //     status: "flipped";
 // };
+
 export type AppState = {
     language: SelectedLanguage,
     texts: TextsType,

@@ -1,7 +1,7 @@
 import { createContext, useContext } from 'react';
 import { AppFlipType, AppState, SelectedLanguage } from '../types/appType';
 import { TextsType } from '../types/languageTypes';
-
+import { match } from 'ts-pattern';
 
 // Define action types
 type Action =
@@ -10,18 +10,19 @@ type Action =
     | { type: 'setFlipApp', payload: AppFlipType };
 
 // Create the reducer function
-export function reducer(state: AppState, action: Action): AppState {
-    switch (action.type) {
-        case 'setLanguage':
-            return { ...state, language: action.payload };
-        case 'setTexts':
-            return { ...state, texts: action.payload };
-        case 'setFlipApp':
-            return { ...state, appFlipped: action.payload };
-        default:
-            return state;
-    }
-}
+export const reducer = (state: AppState, action: Action): AppState =>
+    match<Action, AppState>(action)
+        .with({ type: "setLanguage" }, (action) => (
+            { ...state, language: action.payload }
+        ))
+        .with({ type: 'setTexts' },
+            (action) => ({ ...state, texts: action.payload })
+        )
+        .with({ type: 'setFlipApp' },
+            (action) => ({ ...state, appFlipped: action.payload })
+        )
+        // .with(P._, () => state)
+        .exhaustive();
 
 // Create the context
 export const AppContext = createContext<{ state: AppState; dispatch: React.Dispatch<Action> } | undefined>(undefined);
