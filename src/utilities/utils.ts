@@ -1,21 +1,27 @@
 import { SelectedPage, SelectedLanguage } from '../types/appType'
 import { pipe } from 'fp-ts/lib/function'
 import { catTexts, engTexts, espTexts } from '../data/appTexts'
+import { match } from 'ts-pattern';
+import { TextsType } from '../types/languageTypes';
 
-export const fromSelectedPageToPageName = (selectedPage: SelectedPage) => {
-    switch (selectedPage) {
-        case SelectedPage.Projects:
-            return 'Projects'
-        case SelectedPage.Contact:
-            return 'Contact'
-        case SelectedPage.Home:
-            return 'Home'
-        case SelectedPage.Testimonials:
-            return 'Testimonials'
-        case SelectedPage.Skills:
-            return 'Skills'
-    }
-}
+export const fromSelectedPageToPageName = (selectedPage: SelectedPage) =>
+    match<SelectedPage>(selectedPage)
+        .with(SelectedPage.Home, () => (
+            'Home'
+        ))
+        .with(SelectedPage.Skills, () => (
+            'Skills'
+        ))
+        .with(SelectedPage.Projects, () => (
+            'Projects'
+        ))
+        .with(SelectedPage.Testimonials, () => (
+            'Testimonials'
+        ))
+        .with(SelectedPage.Contact, () => (
+            'Contact'
+        ))
+        .exhaustive();
 
 const addSimbolPrefix = (input: string, simbol: string): string => `${simbol}${input}`
 
@@ -31,25 +37,18 @@ export const fromSelectedPageToPageHref = (selectedPage: SelectedPage) =>
 
 // ------------------------------------------
 
-export const importAppTexts = (selectedLanguage: SelectedLanguage) => {
-    let texts
-
-    switch (selectedLanguage) {
-        case SelectedLanguage.English:
-            texts = engTexts
-            break;
-        case SelectedLanguage.Spanish:
-            texts = espTexts
-            break;
-        case SelectedLanguage.Catalan:
-            texts = catTexts
-            break;
-        default:
-            texts = engTexts
-    }
-
-    return texts
-}
+export const importAppTexts = (selectedLanguage: SelectedLanguage): TextsType =>
+    match<SelectedLanguage>(selectedLanguage)
+        .with(SelectedLanguage.English, () => (
+            engTexts
+        ))
+        .with(SelectedLanguage.Spanish, () => (
+            espTexts
+        ))
+        .with(SelectedLanguage.Catalan, () => (
+            catTexts
+        ))
+        .exhaustive();
 
 // ------------------------------------------
 

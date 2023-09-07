@@ -1,6 +1,7 @@
 import { SelectedPage } from "../types/appType";
 import { useAppContext } from '../context/appContextUtils'
 import { useState, useEffect } from "react";
+import { match } from 'ts-pattern';
 
 type Props = {
     page: SelectedPage;
@@ -11,26 +12,23 @@ const PageNameMultiLanguage = ({ page }: Props) => {
     const { state } = useAppContext();
 
     useEffect(() => {
-        switch (page) {
-            case SelectedPage.Projects:
-                setPageName(state.texts.navbarMenu.projects);
-                break;
-            case SelectedPage.Contact:
-                setPageName(state.texts.navbarMenu.contact);
-                break;
-            case SelectedPage.Home:
-                setPageName(state.texts.navbarMenu.home);
-                break;
-            case SelectedPage.Testimonials:
-                setPageName(state.texts.navbarMenu.testimonials);
-                break;
-            case SelectedPage.Skills:
-                setPageName(state.texts.navbarMenu.skills);
-                break;
-            default:
-                setPageName('Home');
-                break;
-        }
+        match<SelectedPage>(page)
+            .with(SelectedPage.Home, () => (
+                setPageName(state.texts.navbarMenu.home)
+            ))
+            .with(SelectedPage.Skills, () => (
+                setPageName(state.texts.navbarMenu.skills)
+            ))
+            .with(SelectedPage.Projects, () => (
+                setPageName(state.texts.navbarMenu.projects)
+            ))
+            .with(SelectedPage.Testimonials, () => (
+                setPageName(state.texts.navbarMenu.testimonials)
+            ))
+            .with(SelectedPage.Contact, () => (
+                setPageName(state.texts.navbarMenu.contact)
+            ))
+            .exhaustive();
     }, [page, state]);
 
     return <div>{pageName}</div>;

@@ -28,9 +28,9 @@ export enum SelectedPage {
 }
 
 export enum SelectedLanguage {
+    Catalan = "catalan",
     English = "english",
     Spanish = "spanish",
-    Catalan = "catalan",
 }
 
 
