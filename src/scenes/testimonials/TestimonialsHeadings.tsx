@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 // import LineGradient from "../../components/LineGradient";
 import SimpleTextFormat from "../../components/textFormat/SimpleTextFormatMultiLine";
-import { useAppContext } from "../../context/AppContext";
+import { useAppContext } from "../../context/appContextUtils";
 import TitleFormat from "../../components/textFormat/TitleFormat";
 
 type Props = {

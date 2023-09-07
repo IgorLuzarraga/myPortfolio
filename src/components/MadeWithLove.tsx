@@ -1,5 +1,5 @@
 import PulseHeart from "./PulseHeart.tsx"
-import { useAppContext } from "../context/AppContext.tsx"
+import { useAppContext } from "../context/appContextUtils"
 
 const MadeWithLove = () => {
     const { state } = useAppContext()

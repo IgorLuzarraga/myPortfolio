@@ -1,6 +1,6 @@
 import { AppState, SelectedPage } from "../types/appType";
 import Link from './Link'
-import { useAppContext } from "../context/AppContext";
+import { useAppContext } from "../context/appContextUtils";
 
 type Props = {
     selectedPage: SelectedPage,

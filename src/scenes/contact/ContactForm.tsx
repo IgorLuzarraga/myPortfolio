@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
-import { useAppContext } from "../../context/AppContext";
+import { useAppContext } from "../../context/appContextUtils";
 
 const ContactForm = () => {
     const { state } = useAppContext()

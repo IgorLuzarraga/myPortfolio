@@ -2,9 +2,9 @@ import { SelectedPage } from "../../types/appType";
 import { fromSelectedPageToPageId } from "../../utilities/utils";
 import MySkillsText from "./MySkillsText";
 import MySkillsImg from "./MySkillsImg";
-import MySkillsExperience from "./MySkillsExperience";
-import MySkillsInnovative from "./MySkillsInnovative";
-import MySkillsImaginative from "./MySkillsImaginative";
+import MySkills_1 from "./MySkills_1";
+import MySkills_2 from "./MySkills_2";
+import MySkills_3 from "./MySkills_3";
 
 const MySkills = () => {
   return (
@@ -24,14 +24,14 @@ const MySkills = () => {
       {/* SKILLS */}
       <div className="md:flex md:justify-between mt-16 gap-8">
 
-        {/* EXPERIENCE */}
-        <MySkillsExperience />
+        {/* SKILLS 1 */}
+        <MySkills_1 />
 
-        {/* INNOVATIVE */}
-        <MySkillsInnovative />
+        {/* SKILLS 2 */}
+        <MySkills_2 />
 
-        {/* IMAGINATIVE */}
-        <MySkillsImaginative />
+        {/* SKILLS 3 */}
+        <MySkills_3 />
 
       </div>
 

@@ -2,7 +2,7 @@ import { SelectedPage } from "../../types/appType";
 import { fromSelectedPageToPageId } from "../../utilities/utils";
 import TestimonialsHeadings from "./TestimonialsHeadings";
 import Testimonial from "./Testimonial";
-import { useAppContext } from '../../context/AppContext';
+import { useAppContext } from '../../context/appContextUtils';
 import { TestimonialsType } from "../../types/testimonialsTypes";
 import { reverseArrInChunksOf3 } from "../../utilities/utilsArr";
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useAppContext } from "../../context/AppContext";
+import { useAppContext } from "../../context/appContextUtils";
 import SimpleTextFormat from "../../components/textFormat/SimpleTextFormatMultiLine";
 // import LineGradient from "../../components/LineGradient";
 

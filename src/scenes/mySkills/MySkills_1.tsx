@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { useAppContext } from '../../context/AppContext';
+import { useAppContext } from '../../context/appContextUtils';
 import SimpleTextFormat from "../../components/textFormat/SimpleTextFormatMultiLine";
 
-const MySkillsExperience = () => {
+const MySkills_1 = () => {
     const { state } = useAppContext();
 
     return (
@@ -27,4 +27,4 @@ const MySkillsExperience = () => {
     )
 }
 
-export default MySkillsExperience
+export default MySkills_1

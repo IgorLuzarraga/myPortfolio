@@ -1,5 +1,5 @@
 import { FaFlipboard } from "react-icons/fa"
-import { useAppContext } from '../context/AppContext';
+import { useAppContext } from '../context/appContextUtils';
 import { AppFlipType } from "../types/appType";
 
 const BtnFlipApp = () => {

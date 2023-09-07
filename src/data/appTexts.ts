@@ -1,8 +1,10 @@
 import { TextsType } from "../types/languageTypes"
 import { engProject1, engProject2, engProject3, engProject4, engProject5, engProject6 } from "./projectsData"
 import { espProject1, espProject2, espProject3, espProject4, espProject5, espProject6 } from "./projectsData"
+import { catProject1, catProject2, catProject3, catProject4, catProject5, catProject6 } from "./projectsData"
 import { engTestimonial1, engTestimonial2, engTestimonial3 } from "./testimonialsData"
 import { espTestimonial1, espTestimonial2, espTestimonial3 } from "./testimonialsData"
+import { catTestimonial1, catTestimonial2, catTestimonial3 } from "./testimonialsData"
 
 export const engTexts: TextsType = {
     navbarMenu: {
@@ -38,7 +40,7 @@ export const engTexts: TextsType = {
     testimonials: {
         titlePart1: "TEST",
         titlePart2: "IMONIALS",
-        heading: "Colleague Testimonials: What Those Who've Worked with Me Have to Say. Explore the feedback and insights shared by individuals who've collaborated with me. Their testimonials reflect our teamwork and the impact of our contributions.",
+        heading: "Colleague Testimonials: What Those Who've Worked with Me Have to Say. Explore the feedback and insights shared by individuals who've collaborated with me. Their testimonials reflect our teamwork, the impact of our contributions and commitment to excellence in every collaboration.",
         testimonialArr: [engTestimonial1, engTestimonial2, engTestimonial3]
     },
     contact: {
@@ -65,7 +67,7 @@ export const espTexts: TextsType = {
         contact: "Contacto"
     },
     landing: {
-        welcome: "¡Bienvenido a mi portafolio de proyectos! Explora mis proyectos de front-end y full-stack. Cada pieza muestra mi habilidad creativa en diseño y mis habilidades técnicas. Desde interfaces de usuario cautivadoras hasta sistemas sólidos en el back-end, mi trabajo refleja una pasión por la innovación. Haz clic en cualquier proyecto para conocer más sobre las tecnologías y desafíos involucrados.",
+        welcome: "¡Bienvenido/a a mi portafolio de proyectos! Explora mis proyectos de front-end y full-stack. Cada pieza muestra mi habilidad creativa en diseño y mis habilidades técnicas. Desde interfaces de usuario cautivadoras hasta sistemas sólidos en el back-end, mi trabajo refleja una pasión por la innovación. Haz clic en cualquier proyecto para conocer más sobre las tecnologías y desafíos involucrados.",
         heading: "Detrás de cada proyecto se encuentra una historia de desafíos superados y nuevas tecnologías dominadas. Haz clic en cualquier proyecto para adentrarte más, descubrir las tecnologías utilizadas y la resolución creativa de problemas que lo acompañó.",
         connectText: "¡Conectemos y hablemos sobre cómo podemos colaborar!",
         contactBtn: "Hablemos"
@@ -90,7 +92,7 @@ export const espTexts: TextsType = {
     testimonials: {
         titlePart1: "TEST",
         titlePart2: "IMONIOS",
-        heading: "Testimonios de Colegas: Lo Que Dicen Aquellos que Han Trabajado Conmigo. Explora los comentarios e ideas compartidos por personas que han colaborado conmigo. Sus testimonios reflejan nuestro trabajo en equipo y el impacto de nuestras contribuciones.",
+        heading: "Testimonios de Colegas: Lo Que Dicen Aquellos que Han Trabajado Conmigo. Explora los comentarios e ideas compartidos por personas que han colaborado conmigo. Sus testimonios reflejan nuestro trabajo en equipo, el impacto de nuestras contribuciones y el compromiso con la excelencia en cada colaboración.",
         testimonialArr: [espTestimonial1, espTestimonial2, espTestimonial3]
     },
     contact: {
@@ -106,4 +108,71 @@ export const espTexts: TextsType = {
         inText: "en",
         cityText: "Barcelona"
     }
+}
+
+export const catTexts: TextsType = {
+    navbarMenu: {
+        home: "Inici",
+        skills: "Habilitats",
+        projects: "Projectes",
+        testimonials: "Testimonis",
+        contact: "Contacte",
+    },
+    landing: {
+        welcome:
+            "Benvingut/da al meu portfoli de projectes! Explora els meus projectes de front-end i full-stack. Cada peça mostra la meva habilitat creativa en disseny i les meves habilitats tècniques. Des d'interfícies d'usuari captivadores fins a sistemes sòlids a la part del servidor, el meu treball reflecteix una passió per la innovació. Fes clic en qualsevol projecte per conèixer més sobre les tecnologies i els reptes involucrats.",
+        heading:
+            "Darrere de cada projecte es troba una història de reptes superats i noves tecnologies dominades. Fes clic en qualsevol projecte per endinsar-te més, descobrir les tecnologies utilitzades i la resolució creativa de problemes que l'ha acompanyat.",
+        connectText: "Connectem i parlem de com podem col·laborar!",
+        contactBtn: "Parlem",
+    },
+    mySkills: {
+        titlePart1: "habil",
+        titlePart2: "itats",
+        heading:
+            "He desenvolupat habilitats sòlides en desenvolupament web, especialment en aplicacions full-stack basades en React. La meva experiència inclou la creació de solucions web interactives i eficients, demostrant la meva versatilitat en tecnologies tant de front-end com de servidor.",
+        skill1Title: "Desenvolupament FullStack",
+        skill1Desc:
+            "Posseeixo un sòlid domini de les tecnologies web tant en el front-end com a la part del servidor. Al front-end, tinc habilitats en HTML, CSS i JavaScript, amb experiència en llibreries i frameworks moderns com React i Next.js. A la part del servidor, sobresurto en tecnologies com Node.js, Express.js o llenguatges i frameworks similars. La meva capacitat per treballar en tot el stack de desenvolupament web em permet construir aplicacions web completes i funcionals.",
+        skill2Title: "Gestió de Bases de Dades",
+        skill2Desc:
+            "Tinc habilitats sòlides en la gestió de bases de dades, incloent bases de dades SQL i NoSQL. Puc dissenyar estructures de bases de dades eficients, optimitzar consultes i garantir la seguretat de les dades. La meva experiència en el tractament de dades permet que les aplicacions emmagatzemin, recuperin i manipulin la informació de manera efectiva, contribuint al rendiment i la fiabilitat general dels projectes web.",
+        skill3Title: "Control de Versions i Col·laboració",
+        skill3Desc:
+            "La col·laboració i el treball en equip són aspectes crucials del meu treball. Estic familiaritzat/ada amb sistemes de control de versions com Git i plataformes com GitHub, que permeten una col·laboració sense problemes amb altres membres de l'equip. Aquestes eines em ajuden a fer seguiment de canvis, resoldre conflictes i mantenir la qualitat del codi. La meva competència en el control de versions fomenta la comunicació efectiva i fluxos de treball eficients en projectes de desenvolupament col·laboratiu, convertint-me en un valuós col·laborador en desenvolupaments en equip.",
+    },
+    projects: {
+        titlePart1: "PRO",
+        titlePart2: "JECTES",
+        heading:
+            "A continuació, trobaràs una selecció cuidadosament escollida de projectes que destaquen les meves habilitats, experiència i passió per resoldre problemes del món real amb tecnologia. Cada projecte es descriu breument i inclou enllaços a repositoris de codi i demostracions en directe. Si et sents amb ganes, explora i mira com abordo diferents reptes.",
+        projectsArr: [
+            catProject1,
+            catProject2,
+            catProject3,
+            catProject4,
+            catProject5,
+            catProject6,
+        ],
+    },
+    testimonials: {
+        titlePart1: "TEST",
+        titlePart2: "IMONIS",
+        heading:
+            "Testimonis de Col·legues: Què Duen Aquells que Han Treballat Amb Mi. Explora els comentaris i idees compartits per persones que han col·laborat amb mi. Els seus testimonis reflecteixen la nostra feina en equip, l'impacte de les nostres contribucions i el compromís amb l'excel·lència en cada col·laboració.",
+        testimonialArr: [catTestimonial1, catTestimonial2, catTestimonial3],
+    },
+    contact: {
+        titlePart1: "CONTAC",
+        titlePart2: "TEMOS",
+        formPlaceholderName: "El teu nom",
+        formPlaceholderEmail: "El teu correu electrònic",
+        formPlaceholderMsg: "Missatge a enviar",
+        semdMsgBtn: "Envia el missatge",
+    },
+    footer: {
+        madeWithText: "Fet amb",
+        inText: "a",
+        cityText: "Barcelona",
+    },
 }

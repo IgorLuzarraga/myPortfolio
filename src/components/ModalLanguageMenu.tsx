@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { SelectedLanguage } from '../types/appType'
+// import { SelectedLanguage } from '../types/appType'
 import { XMarkIcon } from '@heroicons/react/20/solid'
 import { TbMessageLanguage } from 'react-icons/tb'
-import { useAppContext } from '../context/AppContext'
-import { importAppTexts } from "../utilities/utils";
+import { useAppContext } from '../context/appContextUtils'
+// import { importAppTexts } from "../utilities/utils";
+import ShowLanguageOptions from './ShowLanguageOptions'
 
 type BtnSelectLanguageProps = {
     isMenuToggled: boolean,
@@ -45,15 +46,15 @@ const BtnSelectLanguage = ({ isMenuToggled, setIsMenuToggled }: BtnSelectLanguag
     </button>
 
 const ModalMenu = ({ isMenuToggled, setIsMenuToggled }: ModalMenuProps) => {
-    const { state, dispatch } = useAppContext();
+    const { state } = useAppContext();
     const posHorizontal = state.appFlipped === "notFlipped" ? 'right-0' : 'left-0'
 
-    const dispathActions = (selectedLanguage: SelectedLanguage) => {
-        dispatch({ type: 'setLanguage', payload: selectedLanguage })
+    // const dispathActions = (selectedLanguage: SelectedLanguage) => {
+    //     dispatch({ type: 'setLanguage', payload: selectedLanguage })
 
-        const texts = importAppTexts(selectedLanguage)
-        dispatch({ type: 'setTexts', payload: texts })
-    }
+    //     const texts = importAppTexts(selectedLanguage)
+    //     dispatch({ type: 'setTexts', payload: texts })
+    // }
 
     return (
         <div className={`fixed top-[440px] md:top-0 ${posHorizontal} h-1/3 z-40 opacity-70 w-[160px] 
@@ -69,7 +70,7 @@ const ModalMenu = ({ isMenuToggled, setIsMenuToggled }: ModalMenuProps) => {
 
             {/* MENU ITEMS */}
             <div className='ml-[18%] flex flex-col gap-10 text-xl text-purple-500'>
-                <div
+                {/* <div
                     className={`${state.language === SelectedLanguage.English ? "text-white" : ""}
               hover:text-white transition duration-500 
                 hover:cursor-pointer`}
@@ -84,7 +85,8 @@ const ModalMenu = ({ isMenuToggled, setIsMenuToggled }: ModalMenuProps) => {
                     onClick={() => dispathActions(SelectedLanguage.Spanish)}
                 >
                     Spanish
-                </div>
+                </div> */}
+                <ShowLanguageOptions />
             </div>
         </div>
     )

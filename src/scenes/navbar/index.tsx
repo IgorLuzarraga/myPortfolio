@@ -5,7 +5,7 @@ import NavSmallScreen from "./NavSmallScreen"
 import BtnFlipApp from "../../components/BtnFlipApp"
 import ShowLogo from "../../components/ShowLogo"
 import ModalLanguageMenu from "../../components/ModalLanguageMenu"
-import { useAppContext } from '../../context/AppContext';
+import { useAppContext } from '../../context/appContextUtils';
 
 type Props = {
     isTopOfPage: boolean,

@@ -1,6 +1,6 @@
 import { SelectedPage, SelectedLanguage } from '../types/appType'
 import { pipe } from 'fp-ts/lib/function'
-import { engTexts, espTexts } from '../data/appTexts'
+import { catTexts, engTexts, espTexts } from '../data/appTexts'
 
 export const fromSelectedPageToPageName = (selectedPage: SelectedPage) => {
     switch (selectedPage) {
@@ -40,6 +40,9 @@ export const importAppTexts = (selectedLanguage: SelectedLanguage) => {
             break;
         case SelectedLanguage.Spanish:
             texts = espTexts
+            break;
+        case SelectedLanguage.Catalan:
+            texts = catTexts
             break;
         default:
             texts = engTexts

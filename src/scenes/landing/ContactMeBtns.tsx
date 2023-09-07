@@ -2,7 +2,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
 import { SelectedPage } from "../../types/appType";
 import { fromSelectedPageToPageHref } from "../../utilities/utils";
-import { useAppContext } from '../../context/AppContext';
+import { useAppContext } from '../../context/appContextUtils';
 
 type Props = {
     btnsInitPos: number,

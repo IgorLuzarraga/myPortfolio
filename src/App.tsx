@@ -15,8 +15,8 @@ import Contact from "./scenes/contact/Contact";
 import ContactFlipped from "./scenes/contact/ContactFlipped";
 import Footer from "./scenes/footer/Footer";
 import FooterFlipped from "./scenes/footer/FooterFlipped";
-import { importAppTexts } from "./utilities/utils";
-import { useAppContext } from './context/AppContext';
+// import { importAppTexts } from "./utilities/utils";
+import { useAppContext } from './context/appContextUtils';
 import { AppState, SelectedPage } from "./types/appType";
 
 const isAppFlipped = (state: AppState) =>
@@ -26,13 +26,14 @@ function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
   const isDesktop = useMediaQuery("(min-width: 1060px")
-  const { state, dispatch } = useAppContext();
+  // const { state, dispatch } = useAppContext();
+  const { state } = useAppContext();
 
-  useEffect(() => {
-    const texts = importAppTexts(state.language)
+  // useEffect(() => {
+  //   const texts = importAppTexts(state.language);
 
-    dispatch({ type: 'setTexts', payload: texts })
-  }, [])
+  //   dispatch({ type: 'setTexts', payload: texts });
+  // }, [dispatch, state.language]);
 
   useEffect(() => {
     const handleScroll = () => {

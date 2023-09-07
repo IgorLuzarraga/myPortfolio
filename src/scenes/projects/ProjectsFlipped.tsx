@@ -6,7 +6,7 @@ import ProjectsHeadings from "./ProjectsHeadings";
 // import ProjectAdvertisement2 from "./ProjectAdvertisement_2";
 import ProjectFlipped from "./ProjectFlipped";
 import { ProjectsType } from "../../types/projectsTypes";
-import { useAppContext } from '../../context/AppContext';
+import { useAppContext } from '../../context/appContextUtils';
 import { reverseArrInChunksOf3 } from "../../utilities/utilsArr";
 
 const container = {
@@ -57,7 +57,7 @@ const showProjects = (projectsData: ProjectsType) => {
 
     return projectsDatasReverse.map((project, index) =>
         <ProjectFlipped
-            key={`${project.title}-${index}`}
+            key={`${project.image}-${index}`}
             title={project.title}
             desc={project.desc}
             github={project.github}

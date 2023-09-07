@@ -1,5 +1,5 @@
 import { SelectedPage } from "../types/appType";
-import { useAppContext } from "../context/AppContext";
+import { useAppContext } from '../context/appContextUtils'
 import { useState, useEffect } from "react";
 
 type Props = {

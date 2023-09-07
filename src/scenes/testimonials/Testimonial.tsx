@@ -14,7 +14,8 @@ const Testimonial = ({
     linkedin,
 }: TestimonialType2) => {
     return <motion.div
-        className='bg-card-color p-10 rounded-3xl xs:w-[320px] w-full'
+        // className='bg-card-color p-10 rounded-3xl xs:w-[320px] w-full'
+        className='bg-card-color p-14 rounded-3xl xs:w-[320px] md:w-1/3'
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.5 }}
@@ -27,15 +28,16 @@ const Testimonial = ({
         <p className="font-playfair text-6xl">“</p>
 
         <div className='mt-1'>
-            <p className='text-white tracking-wider text-[18px]'>{testimonialDesc}</p>
+            <p className='text-white tracking-wider text-xl md:text-2xl'>{testimonialDesc}</p>
 
             <div className='mt-7 flex justify-between items-center gap-1'>
                 <div className='flex-1 flex flex-col'>
                     <p className='text-white font-medium text-[16px]'>
                         <span className='blue-text-gradient'>@</span> {name}
                     </p>
-                    <p className='mt-1 text-secondary text-[12px]'>
-                        {designation} of {company}
+                    <p className='flex gap-4 mt-1 text-lg'>
+                        <span>{designation}</span>
+                        <span> {company}</span>
                     </p>
                 </div>
 

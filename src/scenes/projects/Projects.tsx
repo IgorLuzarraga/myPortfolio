@@ -6,7 +6,7 @@ import ProjectsHeadings from "./ProjectsHeadings";
 // import ProjectAdvertisement_1 from "./ProjectAdvertisement_1";
 // import ProjectAdvertisement_2 from "./ProjectAdvertisement_2";
 import { ProjectsType } from "../../types/projectsTypes";
-import { useAppContext } from "../../context/AppContext";
+import { useAppContext } from "../../context/appContextUtils";
 
 const container = {
     hidden: {},
@@ -52,7 +52,7 @@ const Projects = () => {
 const showProjects = (projectsData: ProjectsType) =>
     projectsData.map((project, index) =>
         <Project
-            key={`${project.title}-${index}`}
+            key={`${project.image}-${index}`}
             title={project.title}
             desc={project.desc}
             github={project.github}

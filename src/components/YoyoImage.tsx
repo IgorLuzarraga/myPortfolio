@@ -27,19 +27,22 @@ const YoyoImage = ({ image }: Props) => {
         },
     };
 
-    const startAnimation = async () => {
-        // Start the animation with a "yoyo" effect
-        await controls.start('animate');
-        await controls.start('yoyo');
-    };
-
     useEffect(() => {
+
+        const startAnimation = async () => {
+            // Start the animation with a "yoyo" effect
+            await controls.start('animate');
+            await controls.start('yoyo');
+        };
+
         // Trigger the animation automatically when the component mounts
         startAnimation();
 
-        // Set up a loop to continuously run the animation
+        let isMounted = true; // Flag to check if the component is mounted
+
+        // Define a function for the animation loop
         const animationLoop = async () => {
-            while (true) {
+            while (isMounted) {
                 await startAnimation(); // Start the animation
                 await new Promise((resolve) => setTimeout(resolve, 200)); // Wait for a delay before running again
             }
@@ -49,9 +52,9 @@ const YoyoImage = ({ image }: Props) => {
 
         // Clean up the loop when the component unmounts
         return () => {
-            // Empty, we don't need to clean up anything
+            isMounted = false; // Set the flag to false to stop the loop when the component unmounts
         };
-    }, []);
+    }, [controls]);
 
     return (
         <motion.img
