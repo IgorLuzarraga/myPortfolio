@@ -58,7 +58,7 @@ const YoyoImage = ({ image }: Props) => {
 
     return (
         <motion.img
-            className='rounded-full object-cover h-48 w-48'
+            className='rounded-full object-cover h-72 w-72'
             initial="initial"
             animate={controls}
             variants={animationVariants}
