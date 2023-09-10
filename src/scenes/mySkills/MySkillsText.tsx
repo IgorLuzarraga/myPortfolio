@@ -9,7 +9,7 @@ const MySkillsText = () => {
 
     return (
         <motion.div
-            className="md:w-1/3"
+            className="md:w-2/3"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.5 }}
