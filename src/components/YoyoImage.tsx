@@ -11,18 +11,18 @@ const YoyoImage = ({ image }: Props) => {
     // Define animation keyframes
     const animationVariants = {
         initial: {
-            y: -50, // Start position
+            y: -180, // Start position
         },
         animate: {
-            y: 50, // End position 
+            y: 20, // End position 
             transition: {
-                duration: 5, // Animation duration
+                duration: 8, // Animation duration
             },
         },
         yoyo: {
-            y: -50, // Back to the initial position
+            y: -180, // Back to the initial position
             transition: {
-                duration: 5, // Animation duration
+                duration: 8, // Animation duration
             },
         },
     };

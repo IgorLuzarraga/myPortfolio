@@ -15,7 +15,7 @@ const LandingImgFlipped = ({ isAboveLarge }: Props) => {
                 // >
                 <div
                     className="hover:filter hover:grayscale transition duration-1000 
-                        z-10 h-52 w-52"
+                        z-10 h-72 w-72"
                 >
                     <YoyoImage image="profile-image.jpeg" />
                 </div>

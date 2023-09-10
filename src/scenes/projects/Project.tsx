@@ -44,7 +44,7 @@ const Project = ({ title, desc, github, vercel, image }: ProjectType) => {
 
             </div>
             <img src={`../assets/projects/${image}`} alt={title}
-                className="w-[400px] h-[400px] object-fill" />
+                className="w-84 h-80 object-fill" />
         </motion.div>
     );
 };
