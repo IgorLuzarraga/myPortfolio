@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { SelectedPage } from "../../types/appType";
 import { fromSelectedPageToPageId } from "../../utilities/utils";
 import ProjectsHeadings from "./ProjectsHeadings";
-// import ProjectAdvertisement1 from "./ProjectAdvertisement_1";
-// import ProjectAdvertisement2 from "./ProjectAdvertisement_2";
+import ProjectAdvertisement_1 from "./ProjectAdvertisement_1";
+import ProjectAdvertisement_2 from "./ProjectAdvertisement_2";
 import ProjectFlipped from "./ProjectFlipped";
 import { ProjectsType } from "../../types/projectsTypes";
 import { useAppContext } from '../../context/appContextUtils';
@@ -38,12 +38,12 @@ const ProjectsFlipped = () => {
                     viewport={{ once: false, amount: 0.2 }}
                 >
 
-                    {/* <ProjectAdvertisement1 /> */}
+                    <ProjectAdvertisement_2 />
 
 
                     {showProjects(state.texts.projects.projectsArr)}
 
-                    {/* <ProjectAdvertisement2 /> */}
+                    <ProjectAdvertisement_1 />
 
 
                 </motion.div>

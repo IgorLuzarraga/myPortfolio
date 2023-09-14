@@ -3,8 +3,8 @@ import Project from "./Project";
 import { SelectedPage } from "../../types/appType";
 import { fromSelectedPageToPageId } from "../../utilities/utils";
 import ProjectsHeadings from "./ProjectsHeadings";
-// import ProjectAdvertisement_1 from "./ProjectAdvertisement_1";
-// import ProjectAdvertisement_2 from "./ProjectAdvertisement_2";
+import ProjectAdvertisement_1 from "./ProjectAdvertisement_1";
+import ProjectAdvertisement_2 from "./ProjectAdvertisement_2";
 import { ProjectsType } from "../../types/projectsTypes";
 import { useAppContext } from "../../context/appContextUtils";
 
@@ -37,11 +37,11 @@ const Projects = () => {
                     viewport={{ once: false, amount: 0.2 }}
                 >
 
-                    {/* <ProjectAdvertisement_1 /> */}
+                    <ProjectAdvertisement_1 />
 
                     {showProjects(state.texts.projects.projectsArr)}
 
-                    {/* <ProjectAdvertisement_2 /> */}
+                    <ProjectAdvertisement_2 />
 
                 </motion.div>
             </div>
