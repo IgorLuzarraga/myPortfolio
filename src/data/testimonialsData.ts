@@ -13,7 +13,7 @@ export const engTestimonial1: TestimonialType = {
 
 export const engTestimonial2: TestimonialType = {
     testimonialDesc:
-        "Igor is an exceptional web developer I've had the privilege of collaborating with. His proficiency in both front-end and back-end development is remarkable. Igor combines technical expertise with a creative touch, consistently achieving remarkable outcomes. His adaptability and teamwork make him an indispensable asset for any web project.",
+        "Igor is a professional who not only brings his extensive knowledge of various programming languages but also his attitude: an observant, hardworking, patient person, committed to the team and the craft of programming solutions. Having had the opportunity to work with him on various projects has been an enriching experience because Igor is the kind of person from whom one learns every day. It has been a true privilege to have been able to work alongside him.",
     name: "Jonathan Rodriguez",
     designation: "Full Stack Developer",
     company: "Freelance",
@@ -44,9 +44,10 @@ export const espTestimonial1: TestimonialType = {
     linkedin: "https://www.linkedin.com/in/carlos-mart%C3%ADn-rodriguez-b5267a272/",
 }
 
+// Igor es un excepcional desarrollador web con quien he tenido el privilegio de colaborar. Su competencia tanto en desarrollo front-end como back-end es destacable. Igor combina experiencia técnica con un toque creativo, logrando consistentemente resultados notables. Su adaptabilidad y trabajo en equipo lo convierten en un activo indispensable para cualquier proyecto web.
 export const espTestimonial2: TestimonialType = {
     testimonialDesc:
-        "Igor es un excepcional desarrollador web con quien he tenido el privilegio de colaborar. Su competencia tanto en desarrollo front-end como back-end es destacable. Igor combina experiencia técnica con un toque creativo, logrando consistentemente resultados notables. Su adaptabilidad y trabajo en equipo lo convierten en un activo indispensable para cualquier proyecto web.",
+        "Igor es un profesional que no solo aporta sus amplios conocimientos en diversos lenguajes de programación, sino también su actitud: Una persona observadora, trabajadora, paciente, comprometido con el equipo y con la artesanía de programar soluciones. Haber podido trabajar con él en diversos proyectos ha sido una experiencia enriquecedora, pues Igor es el tipo de persona de la que uno aprende cada día. Ha sido un verdadero privilegio haber podido trabajar junto a él.",
     name: "Jonathan Rodriguez",
     designation: "Desarrollador Full Stack",
     company: "Freelance",
@@ -79,7 +80,7 @@ export const catTestimonial1: TestimonialType = {
 
 export const catTestimonial2: TestimonialType = {
     testimonialDesc:
-        "Igor és un excepcional desenvolupador web amb qui he tingut el privilegi de col·laborar. La seva competència tant en desenvolupament front-end com back-end és destacable. Igor combina experiència tècnica amb un toc creatiu, aconseguint de manera consistent resultats notables. La seva adaptabilitat i treball en equip el converteixen en un actiu indispensable per a qualsevol projecte web.",
+        "Igor és un professional que no només aporta els seus extensos coneixements en diversos llenguatges de programació, sinó també la seva actitud: una persona observadora, treballadora, pacient, compromesa amb l'equip i amb l'artesania de programar solucions. Haver tingut l'oportunitat de treballar amb ell en diversos projectes ha estat una experiència enriquidora, perquè Igor és el tipus de persona de qui es fa l'aprenentatge cada dia. Ha estat un autèntic privilegi haver pogut treballar al seu costat.",
     name: "Jonathan Rodriguez",
     designation: "Desarrollador Full Stack",
     company: "Freelance",

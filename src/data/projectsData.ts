@@ -34,7 +34,7 @@ export const engProject4: ProjectType = {
 
 export const engProject5: ProjectType = {
     title: "DevLink",
-    desc: "Explore a global social network for travel enthusiasts. Share stories, plan trips, and join travel groups. Turn wanderlust into shared adventures, fostering connections with fellow explorers worldwide.",
+    desc: "DevLink is a social network that connects companies and developers. Developers can follow, rate, and message each other. Users can also create job offers, follow them, rate them, and engage in discussions about the job listings. It's the ultimate platform for connecting tech professionals.",
     github: "https://github.com/IgorLuzarraga/Frontend-DevLink",
     vercel: "https://frontend-dev-link-vert.vercel.app/",
     image: "devlink.jpg",
@@ -82,7 +82,7 @@ export const espProject4: ProjectType = {
 
 export const espProject5: ProjectType = {
     title: "DevLink",
-    desc: "Explora una red social global para entusiastas de los viajes. Comparte historias, planifica tus viajes y únete a grupos de viajeros. Convierte el deseo de explorar en aventuras compartidas, fomentando conexiones con compañeros exploradores de todo el mundo.",
+    desc: "DevLink es una red social que conecta empresas y desarrolladores. Los desarrolladores pueden seguir, calificar y enviarse mensajes entre ellos. Los usuarios también pueden crear ofertas de trabajo, seguirlas, calificarlas y participar en discusiones sobre las ofertas laborales. Es la plataforma definitiva para conectar a profesionales de la tecnología.",
     github: "https://github.com/IgorLuzarraga/Frontend-DevLink",
     vercel: "https://frontend-dev-link-vert.vercel.app/",
     image: "devlink.jpg",
@@ -130,7 +130,7 @@ export const catProject4: ProjectType = {
 
 export const catProject5: ProjectType = {
     title: "DevLink",
-    desc: "Explora una xarxa social global per a entusiastes dels viatges. Comparteix històries, planifica els teus viatges i uneix-te a grups de viatgers. Converteix el desig d'explorar en aventures compartides, fomentant connexions amb companys exploradors de tot el món.",
+    desc: "DevLink és una xarxa social que connecta empreses i desenvolupadors. Els desenvolupadors poden seguir-se, valorar-se i enviar-se missatges entre ells. Els usuaris també poden crear ofertes de treball, seguir-les, valorar-les i participar en discussions sobre les ofertes laborals. És la plataforma definitiva per connectar professionals de la tecnologia.",
     github: "https://github.com/IgorLuzarraga/Frontend-DevLink",
     vercel: "https://frontend-dev-link-vert.vercel.app/",
     image: "devlink.jpg",
