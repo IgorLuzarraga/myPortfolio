@@ -1,5 +1,5 @@
 import { TextsType } from "../types/languageTypes"
-import { engProject1, engProject2, engProject3, engProject4, engProject5, engProject6 } from "./projectsData"
+import { catProject7, engProject1, engProject2, engProject3, engProject4, engProject5, engProject6, engProject7, espProject7 } from "./projectsData"
 import { espProject1, espProject2, espProject3, espProject4, espProject5, espProject6 } from "./projectsData"
 import { catProject1, catProject2, catProject3, catProject4, catProject5, catProject6 } from "./projectsData"
 import { engTestimonial1, engTestimonial2, engTestimonial3 } from "./testimonialsData"
@@ -35,7 +35,7 @@ export const engTexts: TextsType = {
         titlePart1: "PRO",
         titlePart2: "JECTS",
         heading: "Below, you'll find a curated selection of projects that highlight my skills, experience, and passion for solving real-world problems with technology. Each project is briefly described and includes links to code repositories and live demos. Feel free to explore and see how I approach different challenges.",
-        projectsArr: [engProject1, engProject2, engProject3, engProject4, engProject5, engProject6]
+        projectsArr: [engProject1, engProject2, engProject3, engProject4, engProject5, engProject6, engProject7]
     },
     testimonials: {
         titlePart1: "TEST",
@@ -87,7 +87,7 @@ export const espTexts: TextsType = {
         titlePart1: "PRO",
         titlePart2: "YECTOS",
         heading: "A continuación, encontrarás una selección cuidadosamente escogida de proyectos que resaltan mis habilidades, experiencia y pasión por resolver problemas del mundo real con tecnología. Cada proyecto se describe brevemente e incluye enlaces a repositorios de código y demostraciones en vivo. Siéntete libre de explorar y ver cómo abordo diferentes desafíos.",
-        projectsArr: [espProject1, espProject2, espProject3, espProject4, espProject5, espProject6]
+        projectsArr: [espProject1, espProject2, espProject3, espProject4, espProject5, espProject6, espProject7]
     },
     testimonials: {
         titlePart1: "TEST",
@@ -153,6 +153,7 @@ export const catTexts: TextsType = {
             catProject4,
             catProject5,
             catProject6,
+            catProject7,
         ],
     },
     testimonials: {

@@ -48,6 +48,14 @@ export const engProject6: ProjectType = {
     image: "portfolio-je.jpg",
 }
 
+export const engProject7: ProjectType = {
+    title: "CarDealer",
+    desc: "CarDealer is a captivating landing page that the user can browse a diverse catalog of vehicles. Filter cars by year, fuel type (gas, electric, or fuel), and brand to find the perfect vehicle for his/her needs.",
+    github: "https://github.com/IgorLuzarraga/car-dealer",
+    vercel: "https://car-dealer-delta.vercel.app/",
+    image: "car-dealer.jpg",
+}
+
 export const espProject1: ProjectType = {
     title: "Ruteros",
     desc: "Explora una red social global para entusiastas de los viajes. Comparte historias, planea viajes y únete a grupos de viajeros. Convierte el deseo de explorar en aventuras compartidas, fomentando conexiones con otros exploradores de todo el mundo.",
@@ -96,6 +104,14 @@ export const espProject6: ProjectType = {
     image: "portfolio-je.jpg",
 }
 
+export const espProject7: ProjectType = {
+    title: "CarDealer",
+    desc: "CarDealer es una cautivadora página de inicio que permite al usuario explorar un catálogo diverso de vehículos. Filtra los coches por año, tipo de combustible (gasolina, eléctrico o diésel) y marca para encontrar el vehículo perfecto según sus necesidades.",
+    github: "https://github.com/IgorLuzarraga/car-dealer",
+    vercel: "https://car-dealer-delta.vercel.app/",
+    image: "car-dealer.jpg",
+}
+
 export const catProject1: ProjectType = {
     title: "Ruteros",
     desc: "Explora una xarxa social global per als entusiastes dels viatges. Comparteix històries, planeja viatges i uneix-te a grups de viatgers. Converteix el desig d'explorar en aventures compartides, fomentant connexions amb altres exploradors de tot el món.",
@@ -142,5 +158,13 @@ export const catProject6: ProjectType = {
     github: "https://github.com/IgorLuzarraga/react-portfolio-ts",
     vercel: "https://react-portfolio-ts-gamma.vercel.app/",
     image: "portfolio-je.jpg",
+}
+
+export const catProject7: ProjectType = {
+    title: "CarDealer",
+    desc: "CarDealer és una captivadora pàgina d'inici que permet a l'usuari explorar un catàleg divers de vehicles. Filtra els cotxes per any, tipus de combustible (gasolina, elèctric o dièsel) i marca per trobar el vehicle perfecte segons les seves necessitats.",
+    github: "https://github.com/IgorLuzarraga/car-dealer",
+    vercel: "https://car-dealer-delta.vercel.app/",
+    image: "car-dealer.jpg",
 }
 
