@@ -20,7 +20,7 @@ const Project = ({ title, desc, github, vercel, image }: ProjectType) => {
         >
             <div className={overlayStyles}>
                 <p className="text-2xl font-playfair">{title}</p>
-                <p className="mt-7">
+                <p className="mt-1 text-sm xs:text-xl">
                     {desc}
                 </p>
                 <div className="flex justify-center items-center gap-5">

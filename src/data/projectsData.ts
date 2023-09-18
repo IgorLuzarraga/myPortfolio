@@ -10,7 +10,7 @@ export const engProject1: ProjectType = {
 
 export const engProject2: ProjectType = {
     title: "Finance App",
-    desc: "Full Stack Finance Dashboard Application. The app features a well-designed landing page displaying KPIs and financial insights. The app incorporates various charts and tables using Recharts for area charts, line charts, bar charts, pie charts, and Scatter Plots – all essential in data analytics.",
+    desc: "Full Stack Finance Dashboard Application. The app features a well-designed landing page displaying KPIs and financial insights essential in data analytics.",
     github: "https://github.com/IgorLuzarraga/finance-app",
     vercel: "https://finance-app-v24h.vercel.app/",
     image: "finance.jpg",
@@ -34,7 +34,7 @@ export const engProject4: ProjectType = {
 
 export const engProject5: ProjectType = {
     title: "DevLink",
-    desc: "DevLink is a social network that connects companies and developers. Developers can follow, rate, and message each other. Users can also create job offers, follow them, rate them, and engage in discussions about the job listings. It's the ultimate platform for connecting tech professionals.",
+    desc: "Social network that links companies and developers, users can connect, rate, message, create job listings, follow, rate, and discuss tech jobs. It's the go-to platform for tech professionals.",
     github: "https://github.com/IgorLuzarraga/Frontend-DevLink",
     vercel: "https://frontend-dev-link-vert.vercel.app/",
     image: "devlink.jpg",
@@ -66,7 +66,7 @@ export const espProject1: ProjectType = {
 
 export const espProject2: ProjectType = {
     title: "Finance App",
-    desc: "Aplicación de Finanzas Full Stack. La aplicación presenta una página de inicio bien diseñada que muestra KPIs e información financiera. La aplicación incorpora varios gráficos y tablas utilizando Recharts para gráficos de área, gráficos de líneas, gráficos de barras, gráficos circulares y diagramas de dispersión, todos esenciales en el análisis de datos.",
+    desc: "Aplicación de Finanzas Full Stack. La aplicación presenta una página de inicio bien diseñada que muestra KPIs e información financiera esencial en el análisis de datos.",
     github: "https://github.com/IgorLuzarraga/finance-app",
     vercel: "https://finance-app-v24h.vercel.app/",
     image: "finance.jpg",
@@ -90,7 +90,7 @@ export const espProject4: ProjectType = {
 
 export const espProject5: ProjectType = {
     title: "DevLink",
-    desc: "DevLink es una red social que conecta empresas y desarrolladores. Los desarrolladores pueden seguir, calificar y enviarse mensajes entre ellos. Los usuarios también pueden crear ofertas de trabajo, seguirlas, calificarlas y participar en discusiones sobre las ofertas laborales. Es la plataforma definitiva para conectar a profesionales de la tecnología.",
+    desc: "Red social que conecta empresas y desarrolladores, los usuarios pueden conectarse, calificar, enviar mensajes, crear ofertas de trabajo, seguir, calificar y debatir sobre empleos tecnológicos. Es la plataforma principal para profesionales de la tecnología.",
     github: "https://github.com/IgorLuzarraga/Frontend-DevLink",
     vercel: "https://frontend-dev-link-vert.vercel.app/",
     image: "devlink.jpg",
@@ -122,7 +122,7 @@ export const catProject1: ProjectType = {
 
 export const catProject2: ProjectType = {
     title: "Finance App",
-    desc: "Aplicació de Finances Full Stack. L'aplicació presenta una pàgina d'inici ben dissenyada que mostra KPIs i informació financera. L'aplicació incorpora diversos gràfics i taules utilitzant Recharts per a gràfics d'àrea, gràfics de línies, gràfics de barres, gràfics circulars i diagrames de dispersió, tots ells essencials en l'anàlisi de dades.",
+    desc: "Aplicació de Finances Full Stack. L'aplicació presenta una pàgina d'inici ben dissenyada que mostra KPIs i informació financera essencial en l'anàlisi de dades.",
     github: "https://github.com/IgorLuzarraga/finance-app",
     vercel: "https://finance-app-v24h.vercel.app/",
     image: "finance.jpg",
@@ -146,7 +146,7 @@ export const catProject4: ProjectType = {
 
 export const catProject5: ProjectType = {
     title: "DevLink",
-    desc: "DevLink és una xarxa social que connecta empreses i desenvolupadors. Els desenvolupadors poden seguir-se, valorar-se i enviar-se missatges entre ells. Els usuaris també poden crear ofertes de treball, seguir-les, valorar-les i participar en discussions sobre les ofertes laborals. És la plataforma definitiva per connectar professionals de la tecnologia.",
+    desc: "Xarxa social que connecta empreses i desenvolupadors, els usuaris poden connectar-se, valorar, enviar missatges, crear ofertes de treball, seguir, valorar i debatre sobre treballs tecnològics. És la plataforma principal per a professionals de la tecnologia.",
     github: "https://github.com/IgorLuzarraga/Frontend-DevLink",
     vercel: "https://frontend-dev-link-vert.vercel.app/",
     image: "devlink.jpg",

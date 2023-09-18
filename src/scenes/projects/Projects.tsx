@@ -7,6 +7,7 @@ import ProjectAdvertisement_1 from "./ProjectAdvertisement_1";
 import ProjectAdvertisement_2 from "./ProjectAdvertisement_2";
 import { ProjectsType } from "../../types/projectsTypes";
 import { useAppContext } from "../../context/appContextUtils";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 const container = {
     hidden: {},
@@ -19,6 +20,7 @@ const container = {
 
 const Projects = () => {
     const { state } = useAppContext()
+    const isDesktop = useMediaQuery("(min-width: 1060px")
 
     return (
         <section id={fromSelectedPageToPageId(SelectedPage.Projects)}
@@ -36,12 +38,11 @@ const Projects = () => {
                     whileInView="visible"
                     viewport={{ once: false, amount: 0.2 }}
                 >
-
-                    <ProjectAdvertisement_1 />
+                    {isDesktop && <ProjectAdvertisement_1 />}
 
                     {showProjects(state.texts.projects.projectsArr)}
 
-                    <ProjectAdvertisement_2 />
+                    {isDesktop && <ProjectAdvertisement_2 />}
 
                 </motion.div>
             </div>
